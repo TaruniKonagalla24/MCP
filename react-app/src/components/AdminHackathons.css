@@ -1,0 +1,80 @@
+.admin-hackathons-container {
+    padding: 30px;
+    background-color: #f9fafb;
+    min-height: 80vh;
+  }
+  
+  .admin-hackathons-container h2 {
+    margin-bottom: 25px;
+    font-size: 28px;
+    text-align: center;
+  }
+  
+  .add-hackathon-form {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .add-hackathon-form input,
+  .add-hackathon-form select {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 220px;
+  }
+  
+  .add-hackathon-form button {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 11px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-hackathon-form button:hover {
+    background-color: #219150;
+  }
+  
+  .hackathons-table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .hackathons-table th,
+  .hackathons-table td {
+    padding: 14px 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .hackathons-table th {
+    background-color: #27ae60;
+    color: white;
+  }
+  
+  .delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c0392b;
+  }
+  

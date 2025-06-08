@@ -27,7 +27,20 @@
 .App-link {
   color: #61dafb;
 }
-
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fa;
+  margin: 0;
+  padding: 0;
+ }
+ .app-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+ }
+ .main-section {
+  min-height: 300px;
+ }
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
