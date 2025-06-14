@@ -1,57 +1,49 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import './LoginForm.css';
-const LoginForm = ({ setLoggedInUser }) => {
- const [activeTab, setActiveTab] = useState('user'); // 'user' or 'admin'
- const [username, setUsername] = useState('');
- const [password, setPassword] = useState('');
+import { useNavigate } from 'react-router-dom';
+const LoginForm = ({ setIsLoggedIn, setUserRole }) => {
  const navigate = useNavigate();
- const mockCredentials = {
-   user: { username: 'user@hexaware.com', password: 'user123' },
-   admin: { username: 'admin@hexaware.com', password: 'admin123' }
+ const [email, setEmail] = useState('');
+ const [password, setPassword] = useState('');
+ const [error, setError] = useState('');
+ const handleLogin = (e) => {
+   e.preventDefault();
+   if (email === 'user@example.com' && password === 'user123') {
+     setIsLoggedIn(true);
+     setUserRole('user');
+     navigate('/dashboard');
+   } else if (email === 'admin@example.com' && password === 'admin123') {
+     setIsLoggedIn(true);
+     setUserRole('admin');
+     navigate('/admin-dashboard');
+   } else {
+     setError('Invalid credentials');
+   }
  };
- const handleSubmit = () => {
-  if (username === 'user@hexaware.com' && password === 'user123') {
-    setLoggedInUser({ username:'user@hexaware.com', role: 'user' });
-    navigate('/dashboard');
-  } else if (username === 'admin@hexaware.com' && password === 'admin123') {
-    setLoggedInUser({ username:'admin@hexaware.com', role: 'admin' });
-    navigate('/admin/dashboard');
-  } else {
-    alert('Invalid credentials');
-  }
-};
  return (
-<div className="login-tab-container">
-<div className="tabs">
-<button
-         className={activeTab === 'user' ? 'active' : ''}
-         onClick={() => setActiveTab('user')}
->
-         User Login
-</button>
-<button
-         className={activeTab === 'admin' ? 'active' : ''}
-         onClick={() => setActiveTab('admin')}
->
-         Admin Login
-</button>
-</div>
-<form onSubmit={handleSubmit} className="login-form">
-<h2>{activeTab === 'admin' ? 'Admin Login' : 'User Login'}</h2>
+<div className="login-container">
+<form className="login-form" onSubmit={handleLogin}>
+<h2>Login</h2>
+       {error && <p className="error">{error}</p>}
 <input
-         type="text"
-         placeholder="Username"
-         value={username}
-         onChange={(e) => setUsername(e.target.value)}
-       /><br />
+         type="email"
+         placeholder="Email"
+         value={email}
+         onChange={(e) => setEmail(e.target.value)}
+         required
+       />
 <input
          type="password"
          placeholder="Password"
          value={password}
          onChange={(e) => setPassword(e.target.value)}
-       /><br />
+         required
+       />
 <button type="submit">Login</button>
+<div className="mock-details">
+<p><strong>User:</strong> user@example.com / user123</p>
+<p><strong>Admin:</strong> admin@example.com / admin123</p>
+</div>
 </form>
 </div>
  );

@@ -30,11 +30,12 @@ const cards = [
   },
 ];
 
-const AdminDashboard = ({ setLoggedInUser }) => {
+const AdminDashboard = ({ setIsLoggedIn, setUserRole }) => {
     const navigate = useNavigate();
 
   const handleLogout = () => {
-    setLoggedInUser(null);
+    setIsLoggedIn(false);
+    setUserRole('');
     navigate('/');
   };
   return (

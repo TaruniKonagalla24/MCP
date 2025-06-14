@@ -1,0 +1,38 @@
+.level-progress-container {
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    animation: scaleIn 0.6s ease-in-out;
+  }
+  
+  .progress-ring {
+    transform: rotate(-90deg);
+  }
+  
+  .bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 10;
+  }
+  
+  .progress {
+    fill: none;
+    stroke: #4caf50;
+    stroke-width: 10;
+    stroke-dasharray: 314;
+    stroke-dashoffset: 314;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.6s ease-out;
+  }
+  
+  .score-text {
+    font-size: 18px;
+    fill: #333;
+    transform: rotate(90deg);
+  }
+  
+  @keyframes scaleIn {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  

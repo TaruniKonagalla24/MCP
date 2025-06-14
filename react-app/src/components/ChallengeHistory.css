@@ -1,0 +1,91 @@
+.challenge-history-container {
+  padding: 2rem;
+  max-width: 3100px;
+  margin: 0 auto;
+  background: #f9fbfd;
+  font-family: 'Segoe UI', sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+  margin-left: 100px;
+ }
+ .history-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #1e293b;
+ }
+ .history-table {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+ }
+ .history-row {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1.2fr 1fr 1.5fr;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  align-items: center;
+  transition: transform 0.2s;
+  min-height: 60px;
+ }
+ .history-row:hover {
+  transform: translateY(-3px);
+ }
+ .challenge-name {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #0f172a;
+ }
+ .challenge-date {
+  color: #64748b;
+  font-size: 0.95rem;
+ }
+ .challenge-status {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: 0.95rem;
+ }
+ .challenge-score {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #334155;
+  text-align: center;
+ }
+ .completed {
+  color: #10b981;
+ }
+ .failed {
+  color: #ef4444;
+ }
+ .in-progress {
+  color: #f59e0b;
+ }
+ .status-icon {
+  font-size: 1rem;
+ }
+ .challenge-actions {
+  display: flex;
+  justify-content: center;
+ }
+ .reattempt-btn {
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+ }
+ .reattempt-btn:hover {
+  background-color: #2563eb;
+ }

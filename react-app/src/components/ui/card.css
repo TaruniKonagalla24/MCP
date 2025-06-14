@@ -1,0 +1,29 @@
+/* card.css */
+.custom-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 2px solid #e0e0e0;
+  }
+  
+  .custom-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  }
+  
+  .custom-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .custom-card-content p {
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  

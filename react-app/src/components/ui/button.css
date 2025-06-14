@@ -1,0 +1,23 @@
+/* button.css */
+.custom-button {
+    padding: 10px 20px;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .custom-button:hover {
+    background: linear-gradient(to right, #5a67d8, #6b46c1);
+    transform: scale(1.05);
+  }
+  
+  .custom-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.4);
+  }
+  

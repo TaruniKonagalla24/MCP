@@ -1,0 +1,238 @@
+.teams-page {
+  padding: 2rem;
+  background-color: #f9fafb;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  width: 100%;
+  margin-left: 70px;
+ }
+ .teams-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #1f2937;
+ }
+ .teams-controls {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+ }
+ .left-controls {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+ }
+ .left-controls input,
+ .left-controls select {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+ }
+ .right-buttons {
+  display: flex;
+  gap: 1rem;
+ }
+ .right-buttons button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+ }
+ .right-buttons button:hover {
+  background-color: #2563eb;
+ }
+ .team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+ }
+ .team-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  position: relative;
+  min-height: 280px;
+ }
+ .team-card:hover {
+  transform: translateY(-5px);
+ }
+ .team-logo {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+ }
+ .team-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+  color: #111827;
+ }
+ .difficulty-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+ }
+ .difficulty-badge.easy {
+  background-color: #10b981;
+ }
+ .difficulty-badge.medium {
+  background-color: #f59e0b;
+ }
+ .difficulty-badge.hard {
+  background-color: #ef4444;
+ }
+ .success-rate {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-top: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+ }
+ .members {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+  flex-wrap: wrap;
+ }
+ .member-avatar {
+  width: 32px;
+  height: 32px;
+  background-color: #e5e7eb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #374151;
+ }
+ .join-btn,
+ .leave-btn {
+  margin-top: 1rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+ }
+ .leave-btn {
+  background-color: #ef4444;
+ }
+ .full-team {
+  margin-top: 1rem;
+  color: #9ca3af;
+  font-size: 0.85rem;
+  font-weight: bold;
+ }
+ .your-team {
+  margin-top: 1rem;
+  color: #10b981;
+  font-weight: 600;
+  font-size: 0.85rem;
+ }
+ .no-teams {
+  font-size: 1rem;
+  color: #9ca3af;
+  text-align: center;
+  grid-column: span 2;
+  margin-top: 2rem;
+ }
+ /* Modal Styling */
+ .modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(31, 41, 55, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+ }
+ .modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  animation: slideUp 0.3s ease-out;
+ }
+ .modal-content h3 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: #1f2937;
+ }
+ .modal-content input {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+ }
+ .modal-content button {
+  padding: 0.5rem 1rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  margin-top: 0.8rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+ }
+ .modal-content button.close {
+  background-color: #9ca3af;
+  margin-left: 1rem;
+ }
+ .logo-options {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 0.5rem 0;
+ }
+ .logo-option {
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  transition: border 0.2s;
+ }
+ .logo-option:hover {
+  border-color: #93c5fd;
+ }
+ .logo-option.selected {
+  border-color: #3b82f6;
+  background-color: #dbeafe;
+ }
+ @keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+ }

@@ -1,107 +1,52 @@
 import React, { useState } from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import LoginForm from './components/LoginForm';
-import UserDashboard from './components/UserDashboard';
-import Hackathon from './components/Hackathon';
-import Progress from './components/Progress';
+import DashboardContent from './components/DashboardContent';
 import AdminDashboard from './components/AdminDashboard';
-import AdminUsers from './components/AdminUsers';
-import AdminHackathons from './components/AdminHackathons';
-import AdminReports from './components/AdminReports';
-import AdminReview from './components/AdminReview'; 
-
+import Sidebar from './components/Sidebar';
+import HackathonPage from './components/HackathonPage';
+import Teams from './components/Teams';
+import Settings from './components/Settings';
+import ChallengeHistory from './components/ChallengeHistory';
+import './App.css';
 function App() {
-  const [loggedInUser, setLoggedInUser] = useState(null);
+ const [isLoggedIn, setIsLoggedIn] = useState(false);
+ const [userRole, setUserRole] = useState('');
+ return (
 
-  const PrivateRoute = ({ children }) => {
-    return loggedInUser ? children : <Navigate to="/" replace />;
-  };
-
-  // Add this inside your App component, before return:
-  const AdminRoute = ({ children }) => {
-    return loggedInUser?.role === 'admin' ? children : <Navigate to="/" replace />;
-  };
-
-  return (
-    <Routes>
-      <Route path="/" element={<LoginForm setLoggedInUser={setLoggedInUser} />} />
-
-      <Route
-        path="/dashboard"
-        element={
-          <PrivateRoute>
-            <UserDashboard setLoggedInUser={setLoggedInUser}/>
-          </PrivateRoute>
-        }
-      />
-      <Route
-        path="/hackathons"
-        element={
-          <PrivateRoute>
-            <Hackathon />
-          </PrivateRoute>
-        }
-      />
-      <Route
-        path="/progress"
-        element={
-          <PrivateRoute>
-            <Progress />
-          </PrivateRoute>
-        }
-      />
-
-      <Route
-        path="/admin/dashboard"
-        element={
-          <AdminRoute>
-            <AdminDashboard />
-          </AdminRoute>
-        }
-      />
-      <Route
-  path="/admin/review"
-  element={
-    <AdminRoute>
-      <AdminReview />
-    </AdminRoute>
-  }
-/>
-      <Route
-        path="/admin/users"
-        element={
-          <AdminRoute>
-            <AdminUsers />
-          </AdminRoute>
-        }
-      />
-      <Route
-        path="/admin/hackathons"
-        element={
-          <AdminRoute>
-            <AdminHackathons />
-          </AdminRoute>
-        }
-      />
-      <Route
-        path="/admin/reports"
-        element={
-          <AdminRoute>
-            <AdminReports />
-          </AdminRoute>
-        }
-      />
+<div className="App">
+       {isLoggedIn && userRole === 'user' ? (
+<div style={{ display: 'flex' }}>
+<Sidebar />
+<div style={{ marginLeft: '250px', width: '100%' }}>
+<Routes>
+<Route path="/dashboard" element={<DashboardContent setIsLoggedIn={setIsLoggedIn} setUserRole={setUserRole} />} />
+<Route path="/hackathons" element={<HackathonPage />} />
+<Route path="/teams" element={<Teams />} />
+<Route path="/settings" element={<Settings />} />
+<Route path="/history" element={<ChallengeHistory />} />
+<Route path="*" element={<Navigate to="/dashboard" />} />
+</Routes>
+</div>
+</div>
+       ) : isLoggedIn && userRole === 'admin' ? (
+<Routes>
+<Route path="/admin-dashboard" element={<AdminDashboard setIsLoggedIn={setIsLoggedIn} setUserRole={setUserRole} />} />
+<Route path="*" element={<Navigate to="/admin-dashboard" />} />
+</Routes>
+       ) : (
+<Routes>
 <Route
-  path="/admin"
-  element={
-    <AdminRoute>
-      <AdminDashboard setLoggedInUser={setLoggedInUser}/>
-    </AdminRoute>
-  }
-/>
-      <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
-  );
-}
+             path="/"
+             element={
+<LoginForm setIsLoggedIn={setIsLoggedIn} setUserRole={setUserRole} />
+             }
+           />
+<Route path="*" element={<Navigate to="/" />} />
+</Routes>
+       )}
+</div>
 
+ );
+}
 export default App;

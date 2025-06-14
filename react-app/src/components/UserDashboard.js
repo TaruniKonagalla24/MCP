@@ -1,93 +1,72 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { FaChartPie, FaCheckCircle, FaTrophy, FaRocket } from 'react-icons/fa';
+import React, { useEffect, useState } from 'react';
 import './UserDashboard.css';
-const UserDashboard = ({ setLoggedInUser })=> {
- const [animatedProgress, setAnimatedProgress] = useState(0);
- const navigate = useNavigate();
- const exercisesCompleted = 12;
- const totalExercises = 20;
- const targetProgress = Math.round((exercisesCompleted / totalExercises) * 100);
- const handleLogout = () => {
-  setLoggedInUser(null);
-  navigate('/');
-};
- const leaderboard = [
-   { name: 'Alice', score: 98 },
-   { name: 'Bob', score: 92 },
-   { name: 'You', score: 89 },
-   { name: 'David', score: 85 },
-   { name: 'Eve', score: 80 },
- ];
- useEffect(() => {
-   const timeout = setTimeout(() => {
-     setAnimatedProgress(targetProgress);
-   }, 300);
-   return () => clearTimeout(timeout);
- }, [targetProgress]);
- const handleHackathonClick = () => {
-   navigate('/hackathons');
- };
- return (
-<div className="dashboard-container"><button
-        onClick={handleLogout}
-        style={{
-          position: 'absolute',
-          top: 20,
-          right: 20,
-          padding: '8px 15px',
-          backgroundColor: '#e74c3c',
-          color: '#fff',
-          border: 'none',
-          borderRadius: '5px',
-          cursor: 'pointer',
-          fontWeight: 'bold',
-        }}
-      >
-        Logout
-      </button>
+import { FaRocket, FaUsers, FaTrophy, FaHome, FaClipboardList, FaCogs } from 'react-icons/fa';
 
-<h1>Welcome to Mavericks, User!</h1>
-<div className="dashboard-cards">
-<div className="card progress-card">
-<h2><FaChartPie className="card-icon" /> Your Progress</h2>
-<div className="progress-ring">
-<svg width="100" height="100">
-<circle className="bg" cx="50" cy="50" r="45" strokeWidth="10" />
-<circle
-               className="progress"
-               cx="50"
-               cy="50"
-               r="45"
-               strokeWidth="10"
-               strokeDasharray="282.6"
-               strokeDashoffset={282.6 - (282.6 * animatedProgress) / 100}
-             />
-</svg>
-<div className="progress-text">{animatedProgress}%</div>
-</div>
-</div>
-<div className="card exercises-card">
-<h2><FaCheckCircle className="card-icon" /> Exercises Completed</h2>
-<p>{exercisesCompleted} / {totalExercises}</p>
-</div>
-<div className="card leaderboard-card">
-<h2><FaTrophy className="card-icon" /> Leaderboard</h2>
-<ul>
-           {leaderboard.map((user, index) => (
-<li key={index}>
-<span>{user.name}</span>
-<span>{user.score}</span>
-</li>
-           ))}
-</ul>
-</div>
-<div className="card hackathon-card">
-<h2><FaRocket className="card-icon" /> Upcoming Hackathons</h2>
-<button onClick={handleHackathonClick}>View & Join</button>
-</div>
-</div>
-</div>
- );
+const UserDashboard = () => {
+  const [timeLeft, setTimeLeft] = useState(5000); // Example: 5000 seconds left
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(prev => (prev > 0 ? prev - 1 : 0));
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const formatTime = (seconds) => {
+    const h = String(Math.floor(seconds / 3600)).padStart(2, '0');
+    const m = String(Math.floor((seconds % 3600) / 60)).padStart(2, '0');
+    const s = String(seconds % 60).padStart(2, '0');
+    return `${h}:${m}:${s}`;
+  };
+
+  return (
+    <div className="dashboard-container">
+      <aside className="sidebar">
+        <div className="sidebar-title">Mavericks Coding Platform</div>
+        <ul className="sidebar-menu">
+          <li><FaHome /> Home</li>
+          <li><FaClipboardList /> Challenges</li>
+          <li><FaClipboardList /> My Submissions</li>
+          <li><FaUsers /> Teams</li>
+          <li><FaTrophy /> Leaderboard</li>
+          <li><FaCogs /> Settings</li>
+        </ul>
+      </aside>
+
+      <main className="dashboard-main">
+        <h2 className="dashboard-title">Featured Challenge</h2>
+        <div className="dashboard-widgets">
+          <div className="dashboard-widget challenge-card">
+            <div className="challenge-timer">{formatTime(timeLeft)}</div>
+            <h3>Challenge Title</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button className="primary-btn">Start Challenge</button>
+          </div>
+
+          <div className="dashboard-widget activity-card">
+            <h4>Recent Activity</h4>
+            <ul className="activity-list">
+              <li>✅ User1 submitted a solution (2h ago)</li>
+              <li>👥 User2 joined your team (3h ago)</li>
+              <li>⭐ User3 started following you (5h ago)</li>
+            </ul>
+          </div>
+
+          <div className="dashboard-widget team-card">
+            <h4>Team Participation</h4>
+            <p>Start collaborating with your team members now!</p>
+            <button className="secondary-btn">Join Team</button>
+          </div>
+
+          <div className="dashboard-widget leaderboard-card">
+            <h4>Leaderboard</h4>
+            <p>See where you stand among others!</p>
+            <button className="secondary-btn">View Leaderboard</button>
+          </div>
+        </div>
+      </main>
+    </div>
+  );
 };
+
 export default UserDashboard;
