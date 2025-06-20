@@ -26,45 +26,47 @@ const COLORS = ['#0088FE', '#00C49F', '#FFBB28'];
 
 const AdminReports = () => {
   return (
-    <div className="admin-reports-container">
+    <div className="admin-reports-wrapper">
+      <div className="admin-reports-container">
         <BackToAdminDashboard />
-      <h2>Reports & Analytics</h2>
+        <h2>Reports & Analytics</h2>
 
-      <div className="chart-container">
-        <h3>User Growth Over Months</h3>
-        <ResponsiveContainer width="100%" height={300}>
-          <BarChart data={usersData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Legend />
-            <Bar dataKey="users" fill="#8884d8" />
-          </BarChart>
-        </ResponsiveContainer>
-      </div>
+        <div className="chart-container">
+          <h3>User Growth Over Months</h3>
+          <ResponsiveContainer width="100%" height={400}>
+            <BarChart data={usersData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="name" />
+              <YAxis />
+              <Tooltip />
+              <Legend />
+              <Bar dataKey="users" fill="#007bff" />
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
 
-      <div className="chart-container">
-        <h3>Challenge Completion Status</h3>
-        <ResponsiveContainer width="100%" height={300}>
-          <PieChart>
-            <Pie
-              data={challengeData}
-              cx="50%"
-              cy="50%"
-              outerRadius={100}
-              fill="#8884d8"
-              dataKey="value"
-              label
-            >
-              {challengeData.map((entry, index) => (
-                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-              ))}
-            </Pie>
-            <Tooltip />
-            <Legend />
-          </PieChart>
-        </ResponsiveContainer>
+        <div className="chart-container">
+          <h3>Challenge Completion Status</h3>
+          <ResponsiveContainer width="100%" height={400}>
+            <PieChart>
+              <Pie
+                data={challengeData}
+                cx="50%"
+                cy="50%"
+                outerRadius={100}
+                fill="#8884d8"
+                dataKey="value"
+                label
+              >
+                {challengeData.map((entry, index) => (
+                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                ))}
+              </Pie>
+              <Tooltip />
+              <Legend />
+            </PieChart>
+          </ResponsiveContainer>
+        </div>
       </div>
     </div>
   );
