@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\MCP\BackendAPI\MCP_API\MCP_API\obj\Release\net8.0\PubTmp\Out\" />
+  <dbfullsql path="C:\MCP\BackendAPI\MCP_API\MCP_API\obj\Release\net8.0\PubTmp\EFSQLScripts\MCP_API.Data.ApplicationDbContext.sql" />
+</sitemanifest>

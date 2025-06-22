@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './LoginForm.css';
 import { useNavigate } from 'react-router-dom';
-
+import api from '../api/axios';
 const LoginForm = ({ setIsLoggedIn, setUserRole }) => {
   const navigate = useNavigate();
   const [isRegistering, setIsRegistering] = useState(false);
@@ -11,30 +11,68 @@ const LoginForm = ({ setIsLoggedIn, setUserRole }) => {
   const [jobRole, setJobRole] = useState('');
   const [error, setError] = useState('');
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
+
+
     e.preventDefault();
-    if (email === 'user@example.com' && password === 'user123') {
+
+    try {
+      const response = await api.post('/User/login', {
+        email: email,
+        password: password
+      });
+
+      // ✅ Assuming the API returns user data with a "role" field
+      const user = response.data;
+      console.log("user rrerer "+response+ user+" "+user.role);
+      
+    if (user.role =='Student') {
+      localStorage.setItem('user', JSON.stringify(user));
       setIsLoggedIn(true);
       setUserRole('user');
       navigate('/dashboard');
-    } else if (email === 'admin@example.com' && password === 'admin123') {
+    } else if (user.role =='Admin') {
+      localStorage.setItem('user', JSON.stringify(user));
       setIsLoggedIn(true);
       setUserRole('admin');
       navigate('/admin-dashboard');
     } else {
       setError('Invalid credentials');
     }
-  };
+    
+  }
+  catch (err) {
+    console.error(err);
+    setError('Login Failed. Please check your credentials.'+ process.env.REACT_APP_API_BASE_UR);
+  }
+};
 
-  const handleRegister = (e) => {
-    e.preventDefault();
-    alert(`Registered Successfully!\nName: ${name}\nEmail: ${email}\nRole: ${jobRole}`);
+const handleRegister = async (e) => {
+  e.preventDefault();
+
+  try {
+    const response = await api.post('/User/register', {
+      username: name,
+      password: password,
+      email: email,
+      role: 'Student',
+      degree: null,
+      specialization: jobRole,
+      phoneNumber: null,
+      photoUrl: null
+    });
+
+    alert('Registered Successfully!');
     setIsRegistering(false);
     setEmail('');
     setPassword('');
     setName('');
     setJobRole('');
-  };
+  } catch (err) {
+    console.error(err);
+    alert('Registration failed. Please try again.');
+  }
+};
 
   return (
     <div className="login-wrapper">
@@ -75,7 +113,7 @@ const LoginForm = ({ setIsLoggedIn, setUserRole }) => {
 
           <input
             type="email"
-            placeholder="User Name"
+            placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required

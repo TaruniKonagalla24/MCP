@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "bdwym0IRp3LcDFY28dxrgn/HSmxl00/eS7keFXYIzJw=",
+  "Source": "MCP_API",
+  "BasePath": "_content/MCP_API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

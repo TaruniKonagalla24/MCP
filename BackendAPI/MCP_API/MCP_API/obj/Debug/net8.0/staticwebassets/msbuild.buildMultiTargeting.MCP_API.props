@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MCP_API.props" />
+</Project>
