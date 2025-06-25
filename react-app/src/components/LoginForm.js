@@ -79,7 +79,7 @@ const handleRegister = async (e) => {
       <div className="animated-bg"></div>
 
       <div className="welcome-section">
-        <h1>Welcome!</h1>
+        <h1>Welcome to maverick coding platform!</h1>
         <p>{isRegistering ? "Join us by creating your account." : "Login to continue your journey 🚀"}</p>
       </div>
 

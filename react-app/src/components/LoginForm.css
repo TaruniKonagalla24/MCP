@@ -52,6 +52,7 @@ body {
   color: #f0f0f0;
   text-align: center;
   max-width: 400px;
+  margin-right: 20rem;
 }
 
 .login-section {
@@ -82,18 +83,27 @@ body {
 .login-form input,
 .login-form select {
   width: 100%;
-  padding: 15px 20px;
-  border: none;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
   margin-bottom: 20px;
-  border-radius: 10px;
-  font-size: 16px;
+  border-radius: 8px;
+  font-size: 1rem;
   background: rgba(255, 255, 255, 0.85);
+  box-sizing: border-box;
   color: #333;
 }
 
 .login-form input::placeholder {
   color: #999;
 }
+
+.login-form select {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D'12'%20height%3D'12'%20xmlns%3D'http%3A//www.w3.org/2000/svg'%3E%3Cpath%20d%3D'M2%204l4%204%204-4'%20stroke%3D'%23333'%20stroke-width%3D'2'%20fill%3D'none'%20fill-rule%3D'evenodd'/%3E%3C/svg%3E");
+ background-repeat: no-repeat;
+ background-position: right 0.75rem center;
+ background-size: 1rem;
+ appearance: none;
+ }
 
 .login-form button {
   width: 100%;
