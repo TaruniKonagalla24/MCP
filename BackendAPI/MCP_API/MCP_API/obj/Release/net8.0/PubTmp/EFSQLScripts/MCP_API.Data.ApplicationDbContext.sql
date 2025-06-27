@@ -144,6 +144,223 @@ BEGIN
     VALUES (N'20250621144403_null changes', N'9.0.6');
 END;
 
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20250622084930_SD changes'
+)
+BEGIN
+    ALTER TABLE [Users] ADD [resume] nvarchar(max) NULL;
+END;
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20250622084930_SD changes'
+)
+BEGIN
+    ALTER TABLE [Users] ADD [streak] int NULL;
+END;
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20250622084930_SD changes'
+)
+BEGIN
+    ALTER TABLE [HackathonsMaster] ADD [Badges] nvarchar(max) NULL;
+END;
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20250622084930_SD changes'
+)
+BEGIN
+    ALTER TABLE [HackathonsMaster] ADD [difficulty] nvarchar(max) NULL;
+END;
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20250622084930_SD changes'
+)
+BEGIN
+    ALTER TABLE [HackathonsMaster] ADD [skill] nvarchar(max) NULL;
+END;
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20250622084930_SD changes'
+)
+BEGIN
+    ALTER TABLE [Hackathons] ADD [Badge] nvarchar(max) NULL;
+END;
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20250622084930_SD changes'
+)
+BEGIN
+    CREATE TABLE [Summary] (
+        [Id] int NOT NULL IDENTITY,
+        [Username] nvarchar(max) NOT NULL,
+        [userid] int NOT NULL,
+        [Summary] nvarchar(max) NOT NULL,
+        [Created] datetime2 NULL,
+        CONSTRAINT [PK_Summary] PRIMARY KEY ([Id])
+    );
+END;
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20250622084930_SD changes'
+)
+BEGIN
+    CREATE TABLE [Teams] (
+        [Id] int NOT NULL IDENTITY,
+        [userid] int NOT NULL,
+        [teamid] nvarchar(max) NOT NULL,
+        CONSTRAINT [PK_Teams] PRIMARY KEY ([Id])
+    );
+END;
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20250622084930_SD changes'
+)
+BEGIN
+    CREATE TABLE [TeamsMaster] (
+        [Id] int NOT NULL IDENTITY,
+        [Teamname] nvarchar(max) NOT NULL,
+        [CreatedBy] nvarchar(max) NOT NULL,
+        [CreatedOn] datetime2 NOT NULL,
+        [TeamMajor] nvarchar(max) NOT NULL,
+        CONSTRAINT [PK_TeamsMaster] PRIMARY KEY ([Id])
+    );
+END;
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20250622084930_SD changes'
+)
+BEGIN
+    EXEC(N'UPDATE [Users] SET [resume] = NULL, [streak] = NULL
+    WHERE [Id] = 1;
+    SELECT @@ROWCOUNT');
+END;
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20250622084930_SD changes'
+)
+BEGIN
+    EXEC(N'UPDATE [Users] SET [resume] = NULL, [streak] = NULL
+    WHERE [Id] = 2;
+    SELECT @@ROWCOUNT');
+END;
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20250622084930_SD changes'
+)
+BEGIN
+    EXEC(N'UPDATE [Users] SET [resume] = NULL, [streak] = NULL
+    WHERE [Id] = 3;
+    SELECT @@ROWCOUNT');
+END;
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20250622084930_SD changes'
+)
+BEGIN
+    EXEC(N'UPDATE [Users] SET [resume] = NULL, [streak] = NULL
+    WHERE [Id] = 4;
+    SELECT @@ROWCOUNT');
+END;
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20250622084930_SD changes'
+)
+BEGIN
+    EXEC(N'UPDATE [Users] SET [resume] = NULL, [streak] = NULL
+    WHERE [Id] = 5;
+    SELECT @@ROWCOUNT');
+END;
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20250622084930_SD changes'
+)
+BEGIN
+    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20250622084930_SD changes', N'9.0.6');
+END;
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20250622114957_SD changes2'
+)
+BEGIN
+    ALTER TABLE [Users] ADD [Points] int NULL;
+END;
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20250622114957_SD changes2'
+)
+BEGIN
+    EXEC(N'UPDATE [Users] SET [Points] = NULL
+    WHERE [Id] = 1;
+    SELECT @@ROWCOUNT');
+END;
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20250622114957_SD changes2'
+)
+BEGIN
+    EXEC(N'UPDATE [Users] SET [Points] = NULL
+    WHERE [Id] = 2;
+    SELECT @@ROWCOUNT');
+END;
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20250622114957_SD changes2'
+)
+BEGIN
+    EXEC(N'UPDATE [Users] SET [Points] = NULL
+    WHERE [Id] = 3;
+    SELECT @@ROWCOUNT');
+END;
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20250622114957_SD changes2'
+)
+BEGIN
+    EXEC(N'UPDATE [Users] SET [Points] = NULL
+    WHERE [Id] = 4;
+    SELECT @@ROWCOUNT');
+END;
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20250622114957_SD changes2'
+)
+BEGIN
+    EXEC(N'UPDATE [Users] SET [Points] = NULL
+    WHERE [Id] = 5;
+    SELECT @@ROWCOUNT');
+END;
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20250622114957_SD changes2'
+)
+BEGIN
+    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20250622114957_SD changes2', N'9.0.6');
+END;
+
 COMMIT;
 GO
 

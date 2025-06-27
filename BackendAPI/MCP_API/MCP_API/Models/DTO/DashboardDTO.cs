@@ -9,5 +9,7 @@ namespace MCP_API.Models.DTO
         public List<SummaryDto>? RecentActivities { get; set; }
         public List<OverallLeaderboardDTO>? LeaderboardDTOs { get; set; }
 
+        public List<ChallengeDTO>? RecommendedChallenges { get; set; }
+        public List<ChallengeDTO>? TeamChallenges { get; set; }
     }
 }

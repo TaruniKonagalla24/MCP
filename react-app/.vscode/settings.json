@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/2a3c6418-97b9-4d96-a24b-2c2d7633d375/resourceGroups/rg-azuser3678_mml.local-0mP4K/providers/Microsoft.Web/sites/Mavericks-coding-platform",
+    "appService.deploySubpath": "."
+}

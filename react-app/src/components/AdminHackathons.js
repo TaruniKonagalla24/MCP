@@ -1,79 +1,113 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './AdminHackathons.css';
 import BackToAdminDashboard from './BackToAdminDashboard';
-
-const initialHackathons = [
-  { id: 1, name: 'April Code Sprint', status: 'Active' },
-  { id: 2, name: 'May Challenge', status: 'Upcoming' },
-  { id: 3, name: 'June Hackfest', status: 'Completed' },
-];
+import api from '../api/axios';
 
 const AdminHackathons = () => {
-  const [hackathons, setHackathons] = useState(initialHackathons);
-  const [newName, setNewName] = useState('');
-  const [newStatus, setNewStatus] = useState('');
-  const [isReassessing, setIsReassessing] = useState(false);
-  const [isUpdatingProfile, setIsUpdatingProfile] = useState(false);
+  const [hackathons, setHackathons] = useState([]);
+  const [filteredHackathons, setFilteredHackathons] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [isGeneratingReport, setIsGeneratingReport] = useState(false);
+  const [statusFilter, setStatusFilter] = useState('all'); // 'all', 'upcoming', 'active', 'completed'
 
-  const addHackathon = () => {
-    if (!newName.trim()) {
-      alert('Please enter hackathon name');
-      return;
+  useEffect(() => {
+    fetchHackathons();
+  }, []);
+
+  useEffect(() => {
+    if (hackathons.length > 0) {
+      filterHackathons();
     }
-    if (!newStatus) {
-      alert('Please select hackathon status');
-      return;
-    }
-    const newHackathon = {
-      id: hackathons.length + 1,
-      name: newName,
-      status: newStatus,
-    };
-    setHackathons([...hackathons, newHackathon]);
-    setNewName('');
-    setNewStatus('');
-  };
+  }, [statusFilter, hackathons]);
 
-  const deleteHackathon = (id) => {
-    setHackathons(hackathons.filter((h) => h.id !== id));
-  };
-
-  const handleReassessHackathon = () => {
-    if (window.confirm("Are you sure you want to re-assess all submissions?")) {
-      setIsReassessing(true);
-      setTimeout(() => {
-        alert("Hackathon submissions re-assessed successfully!");
-        setIsReassessing(false);
-      }, 2000);
+  const fetchHackathons = async () => {
+    try {
+      const response = await api.get('/Hackathon/getallhackathons');
+      setHackathons(response.data);
+      setLoading(false);
+    } catch (error) {
+      console.error('Error fetching hackathons:', error);
+      setLoading(false);
     }
   };
 
-  const handleUpdateProfile = () => {
-    if (window.confirm("Are you sure you want to update user profiles?")) {
-      setIsUpdatingProfile(true);
-      setTimeout(() => {
-        alert("User profiles updated successfully!");
-        setIsUpdatingProfile(false);
-      }, 2000);
+  const filterHackathons = () => {
+    if (statusFilter === 'all') {
+      setFilteredHackathons(hackathons);
+    } else {
+      const filtered = hackathons.filter(hackathon => {
+        const status = getStatus(hackathon.startTime, hackathon.endTime);
+        return status.toLowerCase() === statusFilter;
+      });
+      setFilteredHackathons(filtered);
     }
   };
 
-  const generateReportCSV = () => {
-    const header = ["ID", "Name", "Status"];
-    const rows = hackathons.map(h => [h.id, h.name, h.status]);
-
-    let csvContent = "data:text/csv;charset=utf-8,"
-      + header.join(",") + "\n"
-      + rows.map(e => e.join(",")).join("\n");
-
-    const encodedUri = encodeURI(csvContent);
-    const link = document.createElement("a");
-    link.setAttribute("href", encodedUri);
-    link.setAttribute("download", "hackathon_report.csv");
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const deleteHackathon = async (id) => {
+    if (window.confirm(`Are you sure you want to delete this hackathon?`)) {
+      try {
+        await api.post('/Hackathon/delethackathon', id);
+        fetchHackathons(); // Refresh the list after deletion
+      } catch (error) {
+        console.error('Error deleting hackathon:', error);
+      }
+    }
   };
+
+  const generateReport = async (id) => {
+    setIsGeneratingReport(true);
+    try {
+      const response = await api.post('/Hackathon/generatereport', id);
+      
+      // Convert the response data to CSV
+      const header = ["Username", "Score", "Last Submission", "Date Registered", "Result"];
+      const rows = response.data.map(item => [
+        item.username,
+        item.score,
+        item.lastsubmission,
+        item.dateRegistered,
+        item.result
+      ]);
+
+      let csvContent = "data:text/csv;charset=utf-8," 
+        + header.join(",") + "\n" 
+        + rows.map(e => e.join(",")).join("\n");
+
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", `hackathon_${id}_report.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (error) {
+      console.error('Error generating report:', error);
+    } finally {
+      setIsGeneratingReport(false);
+    }
+  };
+
+  const getStatus = (startTime, endTime) => {
+    const now = new Date();
+    const start = new Date(startTime);
+    const end = new Date(endTime);
+    
+    if (now < start) return 'Upcoming';
+    if (now >= start && now <= end) return 'Active';
+    return 'Completed';
+  };
+
+  if (loading) {
+    return (
+      <div className="admin-hackathons-wrapper">
+        <div className="admin-hackathons-container">
+          <BackToAdminDashboard />
+          <h2>Hackathon Management</h2>
+          <p>Loading hackathons...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="admin-hackathons-wrapper">
@@ -81,37 +115,19 @@ const AdminHackathons = () => {
         <BackToAdminDashboard />
         <h2>Hackathon Management</h2>
 
-        <div className="action-buttons">
-          <button className="action-btn" onClick={handleReassessHackathon} disabled={isReassessing}>
-            {isReassessing ? "Re-assessing..." : "Re-assess"}
-          </button>
-
-          <button className="action-btn" onClick={handleUpdateProfile} disabled={isUpdatingProfile}>
-            {isUpdatingProfile ? "Updating..." : "Update Profile"}
-          </button>
-
-          <button className="action-btn" onClick={generateReportCSV}>
-            Generate Report
-          </button>
-        </div>
-
-        <div className="add-hackathon-form">
-          <input
-            type="text"
-            placeholder="New Hackathon Name"
-            value={newName}
-            onChange={(e) => setNewName(e.target.value)}
-          />
+        <div className="filter-controls">
+          <label htmlFor="status-filter">Filter by Status:</label>
           <select
-            value={newStatus}
-            onChange={(e) => setNewStatus(e.target.value)}
+            id="status-filter"
+            value={statusFilter}
+            onChange={(e) => setStatusFilter(e.target.value)}
+            className="status-filter"
           >
-            <option value="">Select Status</option>
-            <option value="Upcoming">Upcoming</option>
-            <option value="Active">Active</option>
-            <option value="Completed">Completed</option>
+            <option value="all">All Hackathons</option>
+            <option value="upcoming">Upcoming</option>
+            <option value="active">Active</option>
+            <option value="completed">Completed</option>
           </select>
-          <button onClick={addHackathon}>Add Hackathon</button>
         </div>
 
         <table className="hackathons-table">
@@ -124,18 +140,39 @@ const AdminHackathons = () => {
             </tr>
           </thead>
           <tbody>
-            {hackathons.map((hackathon) => (
-              <tr key={hackathon.id}>
-                <td>{hackathon.id}</td>
-                <td>{hackathon.name}</td>
-                <td>{hackathon.status}</td>
-                <td>
-                  <button className="delete-btn" onClick={() => deleteHackathon(hackathon.id)}>
-                    Delete
-                  </button>
+            {filteredHackathons.length > 0 ? (
+              filteredHackathons.map((hackathon) => {
+                const status = getStatus(hackathon.startTime, hackathon.endTime);
+                return (
+                  <tr key={hackathon.id}>
+                    <td>{hackathon.id}</td>
+                    <td>{hackathon.problem}</td>
+                    <td>{status}</td>
+                    <td className="actions-cell">
+                      <button 
+                        className="report-btn" 
+                        onClick={() => generateReport(hackathon.id)}
+                        disabled={isGeneratingReport}
+                      >
+                        {isGeneratingReport ? "Generating..." : "Generate Report"}
+                      </button>
+                      <button 
+                        className="delete-btn" 
+                        onClick={() => deleteHackathon(hackathon.id)}
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                );
+              })
+            ) : (
+              <tr>
+                <td colSpan="4" className="no-results">
+                  No hackathons found matching the selected filter
                 </td>
               </tr>
-            ))}
+            )}
           </tbody>
         </table>
       </div>

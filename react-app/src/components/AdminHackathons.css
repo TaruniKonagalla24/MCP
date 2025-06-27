@@ -24,65 +24,25 @@
   color: #333;
 }
 
-.action-buttons {
+.filter-controls {
+  margin-bottom: 20px;
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
-}
-
-.action-btn {
-  background-color: #007bff;
-  color: white;
-  padding: 12px 22px;
-  font-size: 16px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.action-btn:hover {
-  background-color: #0056b3;
-}
-
-.action-btn:disabled {
-  background-color: #cccccc;
-  cursor: not-allowed;
-}
-
-.add-hackathon-form {
-  display: flex;
+  align-items: center;
   justify-content: center;
   gap: 15px;
-  margin-bottom: 30px;
-  flex-wrap: wrap;
 }
 
-.add-hackathon-form input,
-.add-hackathon-form select {
-  padding: 12px 18px;
-  font-size: 16px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  width: 250px;
-  background-color: #fafafa;
-}
-
-.add-hackathon-form button {
-  background-color: #28a745;
-  color: white;
-  padding: 12px 25px;
-  border-radius: 8px;
-  border: none;
+.filter-controls label {
   font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  color: #555;
 }
 
-.add-hackathon-form button:hover {
-  background-color: #218838;
+.status-filter {
+  padding: 8px 15px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background-color: #f8f8f8;
+  font-size: 14px;
 }
 
 .hackathons-table {
@@ -115,6 +75,32 @@
   background-color: #f1f1f1;
 }
 
+.actions-cell {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.report-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.report-btn:hover {
+  background-color: #218838;
+}
+
+.report-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
 .delete-btn {
   background-color: #dc3545;
   color: white;
@@ -128,4 +114,11 @@
 
 .delete-btn:hover {
   background-color: #b52a36;
+}
+
+.no-results {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+  font-style: italic;
 }

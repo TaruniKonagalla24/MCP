@@ -5,6 +5,7 @@ namespace MCP_API.Repository
 {
     public interface IUserRepository
     {
+        Task<ProgrssDTO> getprogress();
         Task<UserDTO> Login(LoginDTO LoginREQ);
         Task<UserDTO> Register(RegisterDTO regddto);
         Task<List<UserDTO>> GetUsers();

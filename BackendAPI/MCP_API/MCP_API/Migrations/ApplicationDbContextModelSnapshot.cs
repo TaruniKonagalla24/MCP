@@ -90,7 +90,13 @@ namespace MCP_API.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("description")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("difficulty")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("hints")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("skill")

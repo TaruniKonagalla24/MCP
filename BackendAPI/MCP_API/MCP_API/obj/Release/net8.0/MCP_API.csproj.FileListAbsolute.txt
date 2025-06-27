@@ -9,6 +9,7 @@ C:\MCP\BackendAPI\MCP_API\MCP_API\bin\Release\net8.0\MCP_API.pdb
 C:\MCP\BackendAPI\MCP_API\MCP_API\bin\Release\net8.0\Azure.Core.dll
 C:\MCP\BackendAPI\MCP_API\MCP_API\bin\Release\net8.0\Azure.Identity.dll
 C:\MCP\BackendAPI\MCP_API\MCP_API\bin\Release\net8.0\Humanizer.dll
+C:\MCP\BackendAPI\MCP_API\MCP_API\bin\Release\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\MCP\BackendAPI\MCP_API\MCP_API\bin\Release\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\MCP\BackendAPI\MCP_API\MCP_API\bin\Release\net8.0\Microsoft.Build.Locator.dll
 C:\MCP\BackendAPI\MCP_API\MCP_API\bin\Release\net8.0\Microsoft.CodeAnalysis.dll
@@ -171,4 +172,11 @@ C:\MCP\BackendAPI\MCP_API\MCP_API\obj\Release\net8.0\refint\MCP_API.dll
 C:\MCP\BackendAPI\MCP_API\MCP_API\obj\Release\net8.0\MCP_API.pdb
 C:\MCP\BackendAPI\MCP_API\MCP_API\obj\Release\net8.0\MCP_API.genruntimeconfig.cache
 C:\MCP\BackendAPI\MCP_API\MCP_API\obj\Release\net8.0\ref\MCP_API.dll
-C:\MCP\BackendAPI\MCP_API\MCP_API\bin\Release\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\MCP\BackendAPI\MCP_API\MCP_API\bin\Release\net8.0\UglyToad.PdfPig.Core.dll
+C:\MCP\BackendAPI\MCP_API\MCP_API\bin\Release\net8.0\UglyToad.PdfPig.DocumentLayoutAnalysis.dll
+C:\MCP\BackendAPI\MCP_API\MCP_API\bin\Release\net8.0\UglyToad.PdfPig.Fonts.dll
+C:\MCP\BackendAPI\MCP_API\MCP_API\bin\Release\net8.0\UglyToad.PdfPig.Package.dll
+C:\MCP\BackendAPI\MCP_API\MCP_API\bin\Release\net8.0\UglyToad.PdfPig.Tokenization.dll
+C:\MCP\BackendAPI\MCP_API\MCP_API\bin\Release\net8.0\UglyToad.PdfPig.Tokens.dll
+C:\MCP\BackendAPI\MCP_API\MCP_API\bin\Release\net8.0\UglyToad.PdfPig.dll
+C:\MCP\BackendAPI\MCP_API\MCP_API\bin\Release\net8.0\Newtonsoft.Json.dll

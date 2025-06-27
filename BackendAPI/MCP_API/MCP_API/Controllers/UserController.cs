@@ -23,6 +23,13 @@ namespace MCP_API.Controllers
             return Ok(o);
 
         }
+        [HttpGet("getprogress")]
+        public async Task<IActionResult> getprogress()
+        {
+            var o = await userRepository.getprogress();
+            return Ok(o);
+
+        }
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginDTO Login)
         {
@@ -34,7 +41,8 @@ namespace MCP_API.Controllers
             return Ok(userDTO);
         }
         [HttpPost("register")]
-        public async Task<IActionResult> Register([FromBody] RegisterDTO register)
+        [Consumes("multipart/form-data")]
+        public async Task<IActionResult> Register([FromForm] RegisterDTO register)
         {
             if (register != null)
             {

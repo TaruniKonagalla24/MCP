@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './HackathonPage.css';
 import api from '../api/axios';
-
+import { useNavigate } from 'react-router-dom';
+ 
 const HackathonPage = () => {
   const [filters, setFilters] = useState({ skill: 'All', difficulty: 'All' });
   const [challenges, setChallenges] = useState([]);
@@ -10,7 +11,7 @@ const HackathonPage = () => {
   const [countdowns, setCountdowns] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
+ 
   // Fetch challenges and stats from API
   useEffect(() => {
     const fetchData = async () => {
@@ -20,7 +21,7 @@ const HackathonPage = () => {
         
         const parsedUser = JSON.parse(userData);
         if (!parsedUser?.id) throw new Error('Invalid user data');
-
+ 
         // Fetch challenges
         const challengesResponse = await api.post(
           '/Hackathon/Getmyhackathons',
@@ -32,7 +33,7 @@ const HackathonPage = () => {
             }
           }
         );
-
+ 
         // Fetch stats
         const statsResponse = await api.get('/Hackathon/hackathonstatus');
         
@@ -45,10 +46,14 @@ const HackathonPage = () => {
         setLoading(false);
       }
     };
-
+ 
     fetchData();
   }, []);
-
+const navigate = useNavigate();
+   const handleViewChallenge = (id) => {
+    navigate('/coding/${challengeId}');
+  }
+ 
   // Update countdowns
   useEffect(() => {
     const updateCountdowns = () => {
@@ -63,14 +68,14 @@ const HackathonPage = () => {
       });
       setCountdowns(newCountdowns);
     };
-
+ 
     if (challenges.length > 0) {
       updateCountdowns();
       const interval = setInterval(updateCountdowns, 1000);
       return () => clearInterval(interval);
     }
   }, [challenges]);
-
+ 
   // Filter challenges
   useEffect(() => {
     const filtered = challenges.filter((c) => {
@@ -80,7 +85,7 @@ const HackathonPage = () => {
     });
     setFilteredChallenges(filtered);
   }, [filters, challenges]);
-
+ 
   // Get stats for a specific hackathon
   const getHackathonStats = (hackathonId) => {
     const stats = hackathonStats.find(stat => stat.hackathonid === hackathonId.toString());
@@ -89,7 +94,7 @@ const HackathonPage = () => {
       success: stats ? parseInt(stats.successpercentage) : 0
     };
   };
-
+ 
   const getDifficultyClass = (level) => {
     switch (level) {
       case 'Easy': return 'difficulty-badge difficulty-easy';
@@ -98,11 +103,11 @@ const HackathonPage = () => {
       default: return 'difficulty-badge';
     }
   };
-
+ 
   if (loading) {
     return <div className="hackathon-page loading">Loading challenges...</div>;
   }
-
+ 
   if (error) {
     return (
       <div className="hackathon-page error">
@@ -112,7 +117,7 @@ const HackathonPage = () => {
       </div>
     );
   }
-
+ 
   return (
     <div className="hackathon-page">
       <div className="hackathon-header">
@@ -156,8 +161,8 @@ const HackathonPage = () => {
                   <div className="metric">
                     <div className="metric-label">👥 Participation: {stats.participation}%</div>
                     <div className="progress-bar">
-                      <div 
-                        className="progress participation-progress" 
+                      <div
+                        className="progress participation-progress"
                         style={{ width: `${stats.participation}%` }}
                       ></div>
                     </div>
@@ -165,16 +170,16 @@ const HackathonPage = () => {
                   <div className="metric">
                     <div className="metric-label">🏆 Success Rate: {stats.success}%</div>
                     <div className="progress-bar">
-                      <div 
-                        className="progress success-progress" 
+                      <div
+                        className="progress success-progress"
                         style={{ width: `${stats.success}%` }}
                       ></div>
                     </div>
                   </div>
                 </div>
-                <button 
+                <button
                   className="view-button"
-                  onClick={() => alert(`Challenge ${c.id} selected - Page under development`)}
+                  onClick={() => handleViewChallenge(c.id)}
                 >
                   View Challenge
                 </button>
@@ -188,5 +193,5 @@ const HackathonPage = () => {
     </div>
   );
 };
-
+ 
 export default HackathonPage;

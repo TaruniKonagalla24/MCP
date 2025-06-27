@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './LoginForm.css';
 import { useNavigate } from 'react-router-dom';
-import api from '../api/axios';
+import api from '../api/axios'; // You'll need to install this package
+
+
 const LoginForm = ({ setIsLoggedIn, setUserRole }) => {
   const navigate = useNavigate();
   const [isRegistering, setIsRegistering] = useState(false);
@@ -9,57 +11,67 @@ const LoginForm = ({ setIsLoggedIn, setUserRole }) => {
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
   const [jobRole, setJobRole] = useState('');
+  const [resumeFile, setResumeFile] = useState(null);
+  const [isParsing, setIsParsing] = useState(false);
   const [error, setError] = useState('');
 
+  // Function to parse PDF text
+
+
+
   const handleLogin = async (e) => {
-
-
     e.preventDefault();
-
     try {
       const response = await api.post('/User/login', {
         email: email,
         password: password
       });
 
-      // ✅ Assuming the API returns user data with a "role" field
       const user = response.data;
       console.log("user rrerer "+response+ user+" "+user.role);
       
-    if (user.role =='Student') {
-      localStorage.setItem('user', JSON.stringify(user));
-      setIsLoggedIn(true);
-      setUserRole('user');
-      navigate('/dashboard');
-    } else if (user.role =='Admin') {
-      localStorage.setItem('user', JSON.stringify(user));
-      setIsLoggedIn(true);
-      setUserRole('admin');
-      navigate('/admin-dashboard');
-    } else {
-      setError('Invalid credentials');
+      if (user.role =='Student') {
+        localStorage.setItem('user', JSON.stringify(user));
+        setIsLoggedIn(true);
+        setUserRole('user');
+        navigate('/dashboard');
+      } else if (user.role =='Admin') {
+        localStorage.setItem('user', JSON.stringify(user));
+        setIsLoggedIn(true);
+        setUserRole('admin');
+        navigate('/admin-dashboard');
+      } else {
+        setError('Invalid credentials');
+      }
     }
-    
-  }
-  catch (err) {
-    console.error(err);
-    setError('Login Failed. Please check your credentials.'+ process.env.REACT_APP_API_BASE_UR);
-  }
-};
+    catch (err) {
+      console.error(err);
+      setError('Login Failed. Please check your credentials.'+ process.env.REACT_APP_API_BASE_UR);
+    }
+  };
 
-const handleRegister = async (e) => {
+ const handleRegister = async (e) => {
   e.preventDefault();
 
   try {
-    const response = await api.post('/User/register', {
-      username: name,
-      password: password,
-      email: email,
-      role: 'Student',
-      degree: null,
-      specialization: jobRole,
-      phoneNumber: null,
-      photoUrl: null
+    const formData = new FormData();
+    formData.append('username', name);
+    formData.append('password', password);
+    formData.append('email', email);
+    formData.append('role', 'Student');
+    formData.append('degree', '');
+    formData.append('specialization', jobRole);
+    formData.append('phoneNumber', '');
+    formData.append('photoUrl', '');
+    if (resumeFile) {
+      formData.append('resumeText', resumeFile); // ✅ must match exactly with backend property
+ // file input name must match server expectation
+    }
+
+    const response = await api.post('/User/register', formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data'
+      }
     });
 
     alert('Registered Successfully!');
@@ -68,11 +80,23 @@ const handleRegister = async (e) => {
     setPassword('');
     setName('');
     setJobRole('');
+    setResumeFile(null);
   } catch (err) {
     console.error(err);
     alert('Registration failed. Please try again.');
   }
 };
+
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    if (file && file.type === 'application/pdf') {
+      setResumeFile(file);
+    } else {
+      alert('Please upload a PDF file');
+      e.target.value = ''; // Reset the file input
+    }
+  };
 
   return (
     <div className="login-wrapper">
@@ -108,6 +132,16 @@ const handleRegister = async (e) => {
                 <option value="Data Scientist">Data Scientist</option>
                 <option value="DevOps Engineer">DevOps Engineer</option>
               </select>
+              <div className="file-upload">
+                <label htmlFor="resume-upload">Upload Resume (PDF):</label>
+                <input
+                  id="resume-upload"
+                  type="file"
+                  accept=".pdf"
+                  onChange={handleFileChange}
+                />
+                {isParsing && <p>Parsing resume...</p>}
+              </div>
             </>
           )}
 
@@ -125,16 +159,17 @@ const handleRegister = async (e) => {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <button type="submit">{isRegistering ? "Register" : "Submit"}</button>
+          <button type="submit" disabled={isParsing}>
+            {isRegistering ? (isParsing ? "Processing..." : "Register") : "Submit"}
+          </button>
 
           <div className="switch-link">
             {isRegistering ? (
               <p>Already have account? <span onClick={() => setIsRegistering(false)}>Login</span></p>
             ) : (
-              <p>Don’t have account? <span onClick={() => setIsRegistering(true)}>Register</span></p>
+              <p>Don't have account? <span onClick={() => setIsRegistering(true)}>Register</span></p>
             )}
           </div>
-
         </form>
       </div>
     </div>

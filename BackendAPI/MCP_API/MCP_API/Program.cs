@@ -1,3 +1,4 @@
+﻿using MCP_API.AiConfig;
 using MCP_API.Data;
 using MCP_API.Repository;
 using MCP_API.SQL;
@@ -8,46 +9,52 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Add CORS policy
+
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowReactApp",
-        policy =>
-        {
-            policy.WithOrigins("http://localhost:3000") // React app URL
-                  .AllowAnyHeader()
-                  .AllowAnyMethod();
-        });
+    options.AddPolicy("AllowOrigins", policy =>
+    {
+        policy.WithOrigins(
+            "http://localhost:3000",
+            "https://mavericks-coding-platform.azurewebsites.net"
+        )
+        .AllowAnyHeader()
+        .AllowAnyMethod();
+    });
 });
+builder.Services.Configure<ApiSettings>(builder.Configuration.GetSection("ApiSettings"));
+
+builder.Services.AddHttpClient<ResumeService>();
+builder.Services.AddHttpClient<AddHackathonService>();
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-//for database
-builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("studentConnectionString")));
 
-//for repository pattern
-builder.Services.AddScoped<IUserRepository,StudentRepository>();
+// DB
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("studentConnectionString")));
+
+// Repos
+builder.Services.AddScoped<IUserRepository, StudentRepository>();
 builder.Services.AddScoped<ITeams, TeamSqlImp>();
 builder.Services.AddScoped<IHackathonMaster, HackathonSqlImpl>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Swagger
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-app.UseCors("AllowReactApp");
+
+
+app.UseCors("AllowOrigins");
+
 app.UseHttpsRedirection();
 
-//jwt
 app.UseAuthentication();
-
 app.UseAuthorization();
 
 app.MapControllers();
-
 app.Run();

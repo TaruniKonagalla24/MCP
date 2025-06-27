@@ -1,4 +1,6 @@
-﻿namespace MCP_API.Models.DTO
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace MCP_API.Models.DTO
 {
     public class RegisterDTO
     {
@@ -10,6 +12,8 @@
         public string? Specialization { get; set; }
         public string? PhoneNumber { get; set; }
         public string? PhotoUrl { get; set; }
+        [FromForm]
+        public IFormFile? resumeText { get; set; }
 
     }
 }

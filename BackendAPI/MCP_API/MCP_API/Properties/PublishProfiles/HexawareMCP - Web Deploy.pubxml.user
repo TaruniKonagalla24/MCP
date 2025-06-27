@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <History>True|2025-06-23T07:22:06.7499797Z||;True|2025-06-23T12:49:16.6714129+05:30||;True|2025-06-23T12:42:49.9289924+05:30||;True|2025-06-23T12:38:21.6886551+05:30||;True|2025-06-23T12:34:58.0230673+05:30||;True|2025-06-23T11:49:31.4490045+05:30||;True|2025-06-23T11:47:08.7817465+05:30||;True|2025-06-23T11:35:27.0385107+05:30||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="studentConnectionString">
+      <Value>Server=tcp:hexamcpdb.database.windows.net%3bUser ID=kavya%3bPassword=Admin1212%3bEncrypt=True%3bTrustServerCertificate=False%3bDatabase=MCP_API_db%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="MCP_API.Data.ApplicationDbContext">
+      <Value>Server=tcp:hexamcpdb.database.windows.net%3bUser ID=kavya%3bPassword=Admin1212%3bEncrypt=True%3bTrustServerCertificate=False%3bDatabase=MCP_API_db%3b</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
