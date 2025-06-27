@@ -103,13 +103,14 @@ const LoginForm = ({ setIsLoggedIn, setUserRole }) => {
       <div className="animated-bg"></div>
 
       <div className="welcome-section">
-        <h1>Welcome to maverick coding platform!</h1>
+        <h1>Welcome to Mavericks Coding Platform!</h1>
+        {/* <h2>By Heaxaware</h> */}
         <p>{isRegistering ? "Join us by creating your account." : "Login to continue your journey 🚀"}</p>
       </div>
 
       <div className="login-section">
         <form className="login-form" onSubmit={isRegistering ? handleRegister : handleLogin}>
-          <h2>{isRegistering ? "Register" : "Sign In"}</h2>
+          <h2>{isRegistering ? "Register With Us" : "Sign In to MCP"}</h2>
           {error && !isRegistering && <p className="error">{error}</p>}
 
           {isRegistering && (
