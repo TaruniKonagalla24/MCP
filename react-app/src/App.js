@@ -46,7 +46,7 @@ function App() {
         ) : isLoggedIn && userRole === 'admin' ? (
           <div style={{ display: 'flex' }}>
             <AdminSideBar />
-            <div style={{ marginLeft: '250px', width: '100%' }}>
+            <div className="main-content">
               <Routes>
                 <Route path="/admin-dashboard" element={<AdminDashboard setIsLoggedIn={setIsLoggedIn} setUserRole={setUserRole} />} />
                 <Route path="/admin/users-progress" element={<AdminUsers />} />

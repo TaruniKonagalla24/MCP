@@ -5,14 +5,23 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
  }
  .main-content {
-  padding: 20px;
-  background-color: #f9f9f9;
-  margin-left: 220px; /* ensure space for sidebar */
+  margin-left: 250px; /* match sidebar width */
+  width: calc(100% - 250px); /* fill remaining space */
+  padding: 30px;
+  background-color: #f8fafc;
   min-height: 100vh;
- }
+  box-sizing: border-box;
+}
+
  .App {
 display: flex;
 height: 100vh;
+ }
+ body,html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
  }
  /* Sidebar styles */
  .sidebar {
@@ -67,7 +76,7 @@ height: 100vh;
   color: #333;
  }
  /* Prevent overlap between sidebar and content */
- @media (max-width: 768px) {
+ /* @media (max-width: 768px) {
   .main-content {
     margin-left: 0;
     padding: 10px;
@@ -80,4 +89,19 @@ height: 100vh;
     flex-wrap: wrap;
     justify-content: space-around;
   }
- } 
+ }  */
+   @media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 15px;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: relative;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

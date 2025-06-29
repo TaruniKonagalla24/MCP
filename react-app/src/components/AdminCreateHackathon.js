@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import api from '../api/axios';
+import { FaRocket, FaAlignLeft ,FaCalendarAlt, FaCode, FaTrophy, FaClock, FaStar, FaTags, FaLightbulb } from 'react-icons/fa';
 import './AdminCreateHackathon.css';
 
 const AdminCreateHackathon = () => {
@@ -77,7 +78,10 @@ const AdminCreateHackathon = () => {
   return (
     <div className="admin-create-hackathon">
       <div className="create-hackathon-container">
-        <h2>Create New Hackathon Challenge</h2>
+       <div className="create-width"><h2>
+  <FaRocket style={{ marginRight: '10px', color: '#4299e1' }} />
+  Create New Hackathon Challenge
+</h2></div>
         
         {error && <div className="error-message">{error}</div>}
         
@@ -101,7 +105,7 @@ const AdminCreateHackathon = () => {
           <form onSubmit={handleFinalSubmit} className="details-form">
             <div className="form-row">
               <div className="form-group">
-                <label>Problem Title</label>
+                <label><FaCode style={{ marginRight: '10px', color: '#1abc9c' }} />Problem Title</label>
                 <input
                   type="text"
                   name="problem"
@@ -111,7 +115,7 @@ const AdminCreateHackathon = () => {
                 />
               </div>
               <div className="form-group">
-                <label>Difficulty</label>
+                <label><FaTags style={{ marginRight: '10px', color: '#ffa500' }} />Difficulty</label>
                 <select
                   name="difficulty"
                   value={formData.difficulty}
@@ -126,7 +130,7 @@ const AdminCreateHackathon = () => {
             </div>
             
             <div className="form-group">
-              <label>Description</label>
+              <label><FaAlignLeft style={{ marginRight: '10px', color: '#3498db' }} />Description</label>
               <textarea
                 name="description"
                 value={formData.description}
@@ -137,7 +141,7 @@ const AdminCreateHackathon = () => {
             
             <div className="form-row">
               <div className="form-group">
-                <label>Start Time</label>
+                <label><FaClock style={{ marginRight: '10px', color: '#00b894'  }} />Start Time</label>
                 <input
                   type="datetime-local"
                   name="startTime"
@@ -146,7 +150,7 @@ const AdminCreateHackathon = () => {
                 />
               </div>
               <div className="form-group">
-                <label>End Time</label>
+                <label><FaCalendarAlt style={{ marginRight: '10px', color: '#6c5ce7' }} />End Time</label>
                 <input
                   type="datetime-local"
                   name="endTime"
@@ -158,7 +162,7 @@ const AdminCreateHackathon = () => {
             
             <div className="form-row">
               <div className="form-group">
-                <label>Badge Name</label>
+                <label><FaTrophy style={{ marginRight: '10px', color: '#e74c3c' }} />Badge Name</label>
                 <input
                   type="text"
                   name="badges"
@@ -168,7 +172,7 @@ const AdminCreateHackathon = () => {
                 />
               </div>
               <div className="form-group">
-                <label>Skills (comma separated)</label>
+                <label><FaStar style={{ marginRight: '10px', color: '#2980b9' }} />Skills (comma separated)</label>
                 <input
                   type="text"
                   name="skill"
@@ -180,7 +184,7 @@ const AdminCreateHackathon = () => {
             </div>
             
             <div className="form-group">
-              <label>Test Cases (JSON)</label>
+              <label><FaLightbulb style={{ marginRight: '10px', color: '#34495e' }} />Test Cases (JSON)</label>
               <textarea
                 name="testCases"
                 value={formData.testCases}
@@ -190,7 +194,7 @@ const AdminCreateHackathon = () => {
             </div>
             
             <div className="form-group">
-              <label>Hints (one per line)</label>
+              <label><FaLightbulb style={{ marginRight: '10px', color: '#f1c40f' }} />Hints (one per line)</label>
               <textarea
                 name="hints"
                 value={formData.hints}
@@ -203,7 +207,7 @@ const AdminCreateHackathon = () => {
               <button type="button" onClick={() => setStep(1)} className="secondary">
                 Back
               </button>
-              <button type="submit" disabled={loading}>
+              <button type="submit"  disabled={loading}>
                 {loading ? 'Saving...' : 'Create Hackathon'}
               </button>
             </div>
