@@ -1,99 +1,171 @@
+/* === Wrapper for entire screen === */
 .admin-users-wrapper {
-  margin-left: 260px;
-  padding: 40px;
-  min-height: 100vh;
-  background-color: #ffffff;  /* fully white background */
+ margin-left: 80px; /* Adjust this if your sidebar is a different width */
+ padding: 40px;
+ min-height: 100vh;
+ background-color: #f2f4f8;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+/* === Card container === */
 .admin-users-container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 30px 40px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
+ max-width: 1000px;
+ margin: 0 auto;
+ padding: 30px 40px;
+ background: #ffffff;
+ border-radius: 12px;
+ box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
-
+/* === Title === */
 .admin-users-title {
-  font-size: 28px;
-  font-weight: 600;
-  margin-bottom: 30px;
-  color: #333;
+ font-size: 28px;
+ font-weight: 600;
+ margin-bottom: 30px;
+ text-align: center;
+ color: #333;
 }
-
+/* === Filter Bar === */
 .filter-bar {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
+ display: flex;
+ justify-content: center;
+ gap: 20px;
+ flex-wrap: wrap;
+ margin-bottom: 30px;
 }
-
 .filter-bar input,
 .filter-bar select {
-  padding: 12px 16px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  width: 220px;
-  transition: all 0.3s ease;
-  background-color: #fafafa;
+ padding: 12px 16px;
+ font-size: 16px;
+ border: 1px solid #ccc;
+ border-radius: 8px;
+ width: 220px;
+ transition: all 0.3s ease;
+ background-color: #fafafa;
 }
-
 .filter-bar input:focus,
 .filter-bar select:focus {
-  border-color: #007bff;
-  outline: none;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+ border-color: #007bff;
+ outline: none;
+ box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
 }
-
+/* === Table Styles === */
 .users-table {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 850px;
-  border-collapse: collapse;
-  font-size: 16px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+ width: 100%;
+ border-collapse: collapse;
+ font-size: 16px;
+ box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
-
-.users-table th, .users-table td {
-  border: 1px solid #ddd;
-  padding: 14px 18px;
-  text-align: center;
+.users-table th,
+.users-table td {
+ border: 1px solid #ddd;
+ padding: 14px 18px;
+ text-align: center;
 }
-
 .users-table th {
-  background-color: #f4f4f4;
-  font-weight: 600;
-  color: #333;
+ background-color: #003366;
+ color: #fff;
+ font-weight: 600;
 }
-
 .users-table tr:nth-child(even) {
-  background-color: #fafafa;
+ background-color: #fafafa;
 }
-
 .users-table tr:hover {
-  background-color: #f1f1f1;
-  transition: background-color 0.3s;
+ background-color: #f1f1f1;
+ transition: background-color 0.3s;
 }
-
+/* === Progress Bar Base === */
 .progress-bar-container {
-  background-color: #e9ecef;
-  border-radius: 20px;
-  overflow: hidden;
-  height: 22px;
-  width: 100%;
-  position: relative;
+ background-color: #e9ecef;
+ border-radius: 20px;
+ overflow: hidden;
+ height: 22px;
+ width: 100%;
+ position: relative;
 }
-
 .progress-bar {
-  background-color: #28a745;
-  height: 100%;
-  color: white;
-  text-align: center;
-  line-height: 22px;
-  font-weight: 500;
-  transition: width 0.5s ease;
+ height: 100%;
+ color: white;
+ text-align: center;
+ line-height: 22px;
+ font-weight: 500;
+ font-size: 14px;
+ transition: width 0.5s ease-in-out;
+ border-radius: 20px;
+}
+/* === Progress Bar Color Levels === */
+.progress-bar-100 {
+ background: linear-gradient(90deg, #00c851, #007e33);
+}
+.progress-bar-75 {
+ background: linear-gradient(90deg, #33b5e5, #0099cc);
+}
+.progress-bar-50 {
+ background: linear-gradient(90deg, #ffbb33, #ff8800);
+}
+.progress-bar-25 {
+ background: linear-gradient(90deg, #ff4444, #cc0000);
+}
+/* === Skill Badges === */
+.skill-badge {
+ display: inline-block;
+ background-color: #e0ecff;
+ color: #0056b3;
+ padding: 6px 10px;
+ border-radius: 12px;
+ font-size: 13px;
+ margin: 0 4px 4px 0;
+ white-space: nowrap;
+}
+/* === Row Fade-in Animation === */
+.user-row {
+ animation: fadeIn 0.5s ease forwards;
+}
+@keyframes fadeIn {
+ from {
+   opacity: 0;
+   transform: translateY(10px);
+ }
+ to {
+   opacity: 1;
+   transform: translateY(0);
+ }
+}
+/* === Responsive Table === */
+@media (max-width: 768px) {
+ .filter-bar {
+   flex-direction: column;
+   align-items: center;
+ }
+ .users-table,
+ .users-table thead,
+ .users-table tbody,
+ .users-table th,
+ .users-table td,
+ .users-table tr {
+   display: block;
+ }
+ .users-table thead {
+   display: none;
+ }
+ .users-table td {
+   padding: 10px;
+   position: relative;
+   text-align: left;
+   border: none;
+   border-bottom: 1px solid #ddd;
+ }
+ .users-table td::before {
+   content: attr(data-label);
+   position: absolute;
+   left: 10px;
+   top: 10px;
+   font-weight: bold;
+   color: #555;
+   text-transform: capitalize;
+ }
+ .users-table tr {
+   margin-bottom: 15px;
+   background: #fff;
+   border-radius: 10px;
+   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+ }
 }
