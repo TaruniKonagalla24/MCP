@@ -12,7 +12,7 @@ function AdminSidebar() {
         <li><NavLink to="/admin/users-progress"><Users /> Users Progress</NavLink></li>
         <li><NavLink to="/admin/manage-hackathons"><Layers /> Manage Hackathons</NavLink></li>
         <li><NavLink to="/admin/reports-analytics"><BarChart2 /> Reports & Analytics</NavLink></li>
-        <li><NavLink to="/admin/AdminCreateHackathon"><CheckSquare /> Review</NavLink></li>
+        <li><NavLink to="/admin/AdminCreateHackathon"><CheckSquare /> New Hackathon</NavLink></li>
       </ul>
     </div>
   );

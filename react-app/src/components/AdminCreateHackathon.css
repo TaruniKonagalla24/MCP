@@ -9,7 +9,7 @@ html, body {
 
 /* Main container next to fixed sidebar */
 .admin-create-hackathon {
-margin-left: 120px;
+margin-left: 50px;
   padding: 20px;
   min-height: 100vh;
   background-color: #ffffff; 
