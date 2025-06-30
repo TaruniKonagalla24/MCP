@@ -8,6 +8,10 @@ namespace MCP_API.Repository
     public interface IHackathonMaster
     {
         Task newhackathon(NewHackathon inp);
+        Task <HackathonsMasterDTO> gethackathon(string id);
+        Task <EvaluationresultDTO> evaluateHackathon(EvaluationDTO input) ;
+        Task submitHackathon(SubmitHackathon input);
+
         Task<AdminDashboardDTO> admindashboard();
         Task<List<HackathonStatus>> hackathonstatus();
         Task<List<AdminOverallLeaderboardDTO>> AdminLeaderboard();

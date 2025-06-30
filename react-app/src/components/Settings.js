@@ -115,13 +115,8 @@ const Settings = () => {
             <div className="form-group">
               <label>Role</label>
               <select name="role" value={formData.role} onChange={handleChange} required>
-                <option value="">Select Role</option>
-                <option value="Frontend Developer">Frontend Developer</option>
-                <option value="Backend Developer">Backend Developer</option>
-                <option value="Full Stack Developer">Full Stack Developer</option>
-                <option value="DevOps Engineer">DevOps Engineer</option>
-                <option value="Data Scientist">Data Scientist</option>
-                <option value="AI/ML Engineer">AI/ML Engineer</option>
+                <option value="">Student</option>
+                
               </select>
             </div>
             <div className="form-group">

@@ -15,7 +15,36 @@ namespace MCP_API.Controllers
         {
             this.hackathonMaster = hackathonMaster;
         }
+        [HttpPost("gethackathon")]
+        public async Task<IActionResult> gethackathon(int hackathonid)
+        {
+            var output = await hackathonMaster.gethackathon(hackathonid.ToString());
+            if (output == null)
+            {
+                return NotFound();
+            }
+            return Ok(output);
 
+        }
+        [HttpPost("evaluateHackathon")]
+        public async Task<IActionResult> evaluateHackathon(EvaluationDTO input)
+        {
+            var output = await hackathonMaster.evaluateHackathon(input);
+            if (output == null)
+            {
+                return NotFound();
+            }
+            return Ok(output);
+
+        }
+        [HttpPost("submitHackathon")]
+        public async Task<IActionResult> submitHackathon(SubmitHackathon input)
+        {
+         await hackathonMaster.submitHackathon(input);
+
+            return Ok();
+
+        }
         [HttpPost("Getmyhackathons")]
         public async Task<IActionResult> Getmyhackathons([FromBody] int userid)
         {
@@ -96,9 +125,9 @@ namespace MCP_API.Controllers
             return Ok();
         }
         [HttpPost("generatereport")]
-        public async Task<IActionResult> generatereport([FromBody] int hackarthonid)
+        public async Task<IActionResult> generatereport([FromBody] int userid)
         {
-            var output = await hackathonMaster.generatehackathonreport(hackarthonid.ToString());
+            var output = await hackathonMaster.generatehackathonreport(userid.ToString());
 
             if (output == null)
             {

@@ -69,6 +69,22 @@
   },
   {
     "ContainingType": "MCP_API.Controllers.HackathonController",
+    "Method": "evaluateHackathon",
+    "RelativePath": "api/Hackathon/evaluateHackathon",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "input",
+        "Type": "MCP_API.Models.DTO.EvaluationDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MCP_API.Controllers.HackathonController",
     "Method": "generatereport",
     "RelativePath": "api/Hackathon/generatereport",
     "HttpMethod": "POST",
@@ -76,7 +92,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "hackarthonid",
+        "Name": "userid",
         "Type": "System.Int32",
         "IsRequired": true
       }
@@ -91,6 +107,22 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MCP_API.Controllers.HackathonController",
+    "Method": "gethackathon",
+    "RelativePath": "api/Hackathon/gethackathon",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "hackathonid",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -117,6 +149,22 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MCP_API.Controllers.HackathonController",
+    "Method": "submitHackathon",
+    "RelativePath": "api/Hackathon/submitHackathon",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "input",
+        "Type": "MCP_API.Models.DTO.SubmitHackathon",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -188,6 +236,22 @@
       {
         "Name": "userid",
         "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MCP_API.Controllers.UserController",
+    "Method": "generatereport",
+    "RelativePath": "api/User/generatereport",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userid",
+        "Type": "System.String",
         "IsRequired": false
       }
     ],

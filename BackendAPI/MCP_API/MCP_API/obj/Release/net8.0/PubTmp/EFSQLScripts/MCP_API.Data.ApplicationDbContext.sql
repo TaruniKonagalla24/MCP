@@ -361,6 +361,31 @@ BEGIN
     VALUES (N'20250622114957_SD changes2', N'9.0.6');
 END;
 
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20250626171557_test24'
+)
+BEGIN
+    ALTER TABLE [HackathonsMaster] ADD [description] nvarchar(max) NULL;
+END;
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20250626171557_test24'
+)
+BEGIN
+    ALTER TABLE [HackathonsMaster] ADD [hints] nvarchar(max) NULL;
+END;
+
+IF NOT EXISTS (
+    SELECT * FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20250626171557_test24'
+)
+BEGIN
+    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20250626171557_test24', N'9.0.6');
+END;
+
 COMMIT;
 GO
 

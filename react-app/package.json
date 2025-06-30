@@ -14,6 +14,7 @@
     "@uiw/react-codemirror": "^4.23.13",
     "axios": "^1.10.0",
     "framer-motion": "^12.17.0",
+    "jspdf": "^3.0.1",
     "lucide-react": "^0.514.0",
     "pdf-parse": "^1.1.1",
     "pdfjs-dist": "^2.16.105",
@@ -21,8 +22,9 @@
     "react-dom": "^19.1.0",
     "react-icons": "^5.5.0",
     "react-router-dom": "^6.30.1",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "recharts": "^2.15.3",
+    "serve": "^14.2.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

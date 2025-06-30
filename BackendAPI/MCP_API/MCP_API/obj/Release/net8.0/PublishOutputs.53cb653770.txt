@@ -33,6 +33,14 @@ C:\MCP\BackendAPI\MCP_API\MCP_API\obj\Release\net8.0\PubTmp\Out\Microsoft.Identi
 C:\MCP\BackendAPI\MCP_API\MCP_API\obj\Release\net8.0\PubTmp\Out\Microsoft.OpenApi.dll
 C:\MCP\BackendAPI\MCP_API\MCP_API\obj\Release\net8.0\PubTmp\Out\Microsoft.SqlServer.Server.dll
 C:\MCP\BackendAPI\MCP_API\MCP_API\obj\Release\net8.0\PubTmp\Out\Microsoft.Win32.SystemEvents.dll
+C:\MCP\BackendAPI\MCP_API\MCP_API\obj\Release\net8.0\PubTmp\Out\Newtonsoft.Json.dll
+C:\MCP\BackendAPI\MCP_API\MCP_API\obj\Release\net8.0\PubTmp\Out\UglyToad.PdfPig.Core.dll
+C:\MCP\BackendAPI\MCP_API\MCP_API\obj\Release\net8.0\PubTmp\Out\UglyToad.PdfPig.DocumentLayoutAnalysis.dll
+C:\MCP\BackendAPI\MCP_API\MCP_API\obj\Release\net8.0\PubTmp\Out\UglyToad.PdfPig.Fonts.dll
+C:\MCP\BackendAPI\MCP_API\MCP_API\obj\Release\net8.0\PubTmp\Out\UglyToad.PdfPig.Package.dll
+C:\MCP\BackendAPI\MCP_API\MCP_API\obj\Release\net8.0\PubTmp\Out\UglyToad.PdfPig.Tokenization.dll
+C:\MCP\BackendAPI\MCP_API\MCP_API\obj\Release\net8.0\PubTmp\Out\UglyToad.PdfPig.Tokens.dll
+C:\MCP\BackendAPI\MCP_API\MCP_API\obj\Release\net8.0\PubTmp\Out\UglyToad.PdfPig.dll
 C:\MCP\BackendAPI\MCP_API\MCP_API\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
 C:\MCP\BackendAPI\MCP_API\MCP_API\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\MCP\BackendAPI\MCP_API\MCP_API\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll

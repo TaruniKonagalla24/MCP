@@ -25,7 +25,9 @@ builder.Services.AddCors(options =>
 builder.Services.Configure<ApiSettings>(builder.Configuration.GetSection("ApiSettings"));
 
 builder.Services.AddHttpClient<ResumeService>();
-builder.Services.AddHttpClient<AddHackathonService>();
+builder.Services.AddHttpClient<AddHackathonService>(); 
+builder.Services.AddHttpClient<EvaluationService>();
+builder.Services.AddHttpClient<ReportService>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

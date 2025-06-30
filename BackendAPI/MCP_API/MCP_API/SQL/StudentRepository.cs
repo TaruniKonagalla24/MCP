@@ -10,17 +10,20 @@ using System.Text;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Globalization;
+using MCP_API.AiConfig;
 
 namespace MCP_API.SQL
 {
     public class StudentRepository : IUserRepository
     {
         private readonly ApplicationDbContext applicationDbContext;
+        private readonly ReportService rep;
 
-        public StudentRepository(ApplicationDbContext applicationDbContext, ResumeService ResumeService)
+        public StudentRepository(ApplicationDbContext applicationDbContext, ResumeService ResumeService, ReportService rep)
         {
             this.applicationDbContext = applicationDbContext;
             this.ResumeService = ResumeService;
+            this.rep = rep;
         }
 
         public ResumeService ResumeService { get; }
@@ -214,6 +217,23 @@ namespace MCP_API.SQL
 
 
 
+
+        }
+
+        async Task<string> IUserRepository.Generatereport(string userid)
+        {
+            string userdetails = string.Empty;
+            UserDTO? user = await applicationDbContext.Users.FirstOrDefaultAsync(h => h.Id.ToString() == userid);
+            List<HackathonDTO> phackathons = await applicationDbContext.Hackathons.Where(h=>h.UserId.ToString()==userid).ToListAsync();
+            List<int> hackathonIds = phackathons.Select(p => p.HackathonId).ToList();
+            List<HackathonsMasterDTO> mhack = await applicationDbContext.HackathonsMaster
+    .Where(h => hackathonIds.Contains(h.Id))
+    .ToListAsync();
+
+            userdetails= Newtonsoft.Json.JsonConvert.SerializeObject(user) + Newtonsoft.Json.JsonConvert.SerializeObject(phackathons) + Newtonsoft.Json.JsonConvert.SerializeObject(mhack);
+     
+
+            return await  rep.GenerateAIReport(userdetails);
 
         }
     }

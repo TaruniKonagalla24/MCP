@@ -72,6 +72,21 @@ namespace MCP_API.Controllers
             return Ok(output);
 
         }
+        [HttpPost("generatereport")]
+        public async Task<IActionResult> generatereport(string userid)
+        {
+            var output = await userRepository.Generatereport(userid);
+            if (output == null)
+            {
+                return NotFound();
+            }
+            return Ok(output);
+
+        }
+
+
+
+
         [HttpPost("Upadateprofile")]
         public async Task<IActionResult> Upadateprofile(UpdateProfileDTO input)
         {

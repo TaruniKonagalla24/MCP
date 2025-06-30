@@ -344,3 +344,11 @@ C:\MCP\BackendAPI\MCP_API\MCP_API\obj\Debug\net8.0\refint\MCP_API.dll
 C:\MCP\BackendAPI\MCP_API\MCP_API\obj\Debug\net8.0\MCP_API.pdb
 C:\MCP\BackendAPI\MCP_API\MCP_API\obj\Debug\net8.0\MCP_API.genruntimeconfig.cache
 C:\MCP\BackendAPI\MCP_API\MCP_API\obj\Debug\net8.0\ref\MCP_API.dll
+C:\MCP\BackendAPI\MCP_API\MCP_API\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\MCP\BackendAPI\MCP_API\MCP_API\bin\Debug\net8.0\UglyToad.PdfPig.Core.dll
+C:\MCP\BackendAPI\MCP_API\MCP_API\bin\Debug\net8.0\UglyToad.PdfPig.DocumentLayoutAnalysis.dll
+C:\MCP\BackendAPI\MCP_API\MCP_API\bin\Debug\net8.0\UglyToad.PdfPig.Fonts.dll
+C:\MCP\BackendAPI\MCP_API\MCP_API\bin\Debug\net8.0\UglyToad.PdfPig.Package.dll
+C:\MCP\BackendAPI\MCP_API\MCP_API\bin\Debug\net8.0\UglyToad.PdfPig.Tokenization.dll
+C:\MCP\BackendAPI\MCP_API\MCP_API\bin\Debug\net8.0\UglyToad.PdfPig.Tokens.dll
+C:\MCP\BackendAPI\MCP_API\MCP_API\bin\Debug\net8.0\UglyToad.PdfPig.dll

@@ -14,11 +14,13 @@ namespace MCP_API.SQL
         private readonly ApplicationDbContext applicationDbContext;
 
         public AddHackathonService AddHackathonService { get; }
+        public EvaluationService EvalualteHackahon { get; }
 
-        public HackathonSqlImpl(ApplicationDbContext applicationDbContext,AddHackathonService addHackathonService)
+        public HackathonSqlImpl(ApplicationDbContext applicationDbContext,AddHackathonService addHackathonService,EvaluationService e)
         {
             this.applicationDbContext = applicationDbContext;
             AddHackathonService = addHackathonService;
+            this.EvalualteHackahon = e;
         }
         async Task<Hackathonout> IHackathonMaster.addhackathon(Hackathonin input)
         {
@@ -199,6 +201,91 @@ namespace MCP_API.SQL
             }
 
             return output;
+        }
+
+        async Task<HackathonsMasterDTO> IHackathonMaster.gethackathon(string id)
+        {
+            return await applicationDbContext.HackathonsMaster.FirstOrDefaultAsync(h => h.Id.ToString()==id);
+        }
+
+        async Task<EvaluationresultDTO> IHackathonMaster.evaluateHackathon(EvaluationDTO input)
+        {
+            HackathonsMasterDTO hack = await applicationDbContext.HackathonsMaster.FirstOrDefaultAsync(h=>h.Id.ToString()==input.hackathonid);
+            string temp = Newtonsoft.Json.JsonConvert.SerializeObject(hack);
+            string temp2 = Newtonsoft.Json.JsonConvert.SerializeObject(input);
+            string inputstring = " need to evaluate a hackathon question is "+ temp+"user answer is "+ temp2 + "  Return a single valid JSON object with these **exact field names** only: score, messages . if the anwer passes alla test cases score should be out of hundred as max if no test cases is passed  or something failed say what went wrong in messages . No comments, no explanation, just raw JSON inside a code block.";
+            // logic to be builded
+            EvaluationresultDTO output = await  EvalualteHackahon.EvaluateHackathon(inputstring);
+            return output;
+           
+        }
+
+        async Task IHackathonMaster.submitHackathon(SubmitHackathon input)
+        {
+            HackathonDTO add =  applicationDbContext.Hackathons.FirstOrDefault(h=> h.HackathonId==input.HackathonId && h.UserId==input.Userid);
+            HackathonsMasterDTO hackathonsMasterDTO =  applicationDbContext.HackathonsMaster.FirstOrDefault(h => h.Id == input.HackathonId);
+            UserDTO userDTO = applicationDbContext.Users.FirstOrDefault(h => h.Id==input.Userid);
+            if (add == null) {
+                add = new HackathonDTO();
+                add.UserId = input.Userid;
+                add.HackathonId = input.HackathonId;
+                add.Score = input.score;
+                add.Answer = input.messages;
+                if (input.score > 50)
+                {
+                    add.Result = "Passed";
+                    add.Badge = hackathonsMasterDTO.Badges;                   
+                    //new summary
+                    SummaryDto sd = new SummaryDto();
+                    sd.Created = DateTime.Now;
+                    sd.Username =userDTO.Username;
+                    sd.userid = userDTO.Id;
+                    userDTO.Points += input.score;
+                    if (userDTO.streak == null) userDTO.streak = 1;
+                    else userDTO.streak += 1;
+                    sd.Summary = " Completed "+ hackathonsMasterDTO.Problem + "earned badge: "+hackathonsMasterDTO.Badges ;
+                    await applicationDbContext.Summary.AddAsync(sd);
+                   
+                }
+                else
+                {
+                    add.Result = "Failed";
+                }
+                add.DateRegistered = DateTime.Now;
+                add.LastSubmission = DateTime.Now;
+                await applicationDbContext.Hackathons.AddAsync(add);
+
+
+            }
+            else
+            {
+                add.Score = input.score;
+                add.Answer = input.messages;
+                if (input.score > 50)
+                {
+                    add.Result = "Passed";
+                    add.Badge = hackathonsMasterDTO.Badges;
+                    //new summary
+                    SummaryDto sd = new SummaryDto();
+                    sd.Created = DateTime.Now;
+                    sd.Username = userDTO.Username;
+                    sd.userid = userDTO.Id;
+                    userDTO.Points += input.score;
+                    if (userDTO.streak == null) userDTO.streak = 1;
+                    else userDTO.streak += 1;
+                    sd.Summary = " Completed " + hackathonsMasterDTO.Problem + "earned badge: " + hackathonsMasterDTO.Badges;
+                    await applicationDbContext.Summary.AddAsync(sd);
+
+                }
+                else
+                {
+                    add.Result = "Failed";
+                }
+                add.DateRegistered = DateTime.Now;
+                add.LastSubmission = DateTime.Now;
+
+            }
+            await applicationDbContext.SaveChangesAsync();
         }
     }
 }

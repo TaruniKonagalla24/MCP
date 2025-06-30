@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './HackathonPage.css';
 import api from '../api/axios';
 import { useNavigate } from 'react-router-dom';
- 
+
 const HackathonPage = () => {
   const [filters, setFilters] = useState({ skill: 'All', difficulty: 'All' });
   const [challenges, setChallenges] = useState([]);
@@ -11,7 +11,8 @@ const HackathonPage = () => {
   const [countdowns, setCountdowns] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
- 
+  const navigate = useNavigate();
+
   // Fetch challenges and stats from API
   useEffect(() => {
     const fetchData = async () => {
@@ -21,7 +22,7 @@ const HackathonPage = () => {
         
         const parsedUser = JSON.parse(userData);
         if (!parsedUser?.id) throw new Error('Invalid user data');
- 
+
         // Fetch challenges
         const challengesResponse = await api.post(
           '/Hackathon/Getmyhackathons',
@@ -33,7 +34,7 @@ const HackathonPage = () => {
             }
           }
         );
- 
+
         // Fetch stats
         const statsResponse = await api.get('/Hackathon/hackathonstatus');
         
@@ -46,14 +47,15 @@ const HackathonPage = () => {
         setLoading(false);
       }
     };
- 
+
     fetchData();
   }, []);
-const navigate = useNavigate();
-   const handleViewChallenge = (id) => {
-    navigate('/coding/${challengeId}');
-  }
- 
+
+  const handleViewChallenge = (challengeId) => {
+    console.log('chalng from chlg scree:'+challengeId)
+    navigate(`/coding/${challengeId}`);
+  };
+
   // Update countdowns
   useEffect(() => {
     const updateCountdowns = () => {
@@ -68,14 +70,14 @@ const navigate = useNavigate();
       });
       setCountdowns(newCountdowns);
     };
- 
+
     if (challenges.length > 0) {
       updateCountdowns();
       const interval = setInterval(updateCountdowns, 1000);
       return () => clearInterval(interval);
     }
   }, [challenges]);
- 
+
   // Filter challenges
   useEffect(() => {
     const filtered = challenges.filter((c) => {
@@ -85,7 +87,7 @@ const navigate = useNavigate();
     });
     setFilteredChallenges(filtered);
   }, [filters, challenges]);
- 
+
   // Get stats for a specific hackathon
   const getHackathonStats = (hackathonId) => {
     const stats = hackathonStats.find(stat => stat.hackathonid === hackathonId.toString());
@@ -94,7 +96,7 @@ const navigate = useNavigate();
       success: stats ? parseInt(stats.successpercentage) : 0
     };
   };
- 
+
   const getDifficultyClass = (level) => {
     switch (level) {
       case 'Easy': return 'difficulty-badge difficulty-easy';
@@ -103,11 +105,11 @@ const navigate = useNavigate();
       default: return 'difficulty-badge';
     }
   };
- 
+
   if (loading) {
     return <div className="hackathon-page loading">Loading challenges...</div>;
   }
- 
+
   if (error) {
     return (
       <div className="hackathon-page error">
@@ -117,31 +119,38 @@ const navigate = useNavigate();
       </div>
     );
   }
- 
+
   return (
     <div className="hackathon-page">
       <div className="hackathon-header">
         <h2>Hackathon Challenges</h2>
         <div className="filters">
           <label>Filter by Skill:
-            <select onChange={(e) => setFilters({ ...filters, skill: e.target.value })}>
-              <option>All</option>
-              <option>Logic</option>
-              <option>Strings</option>
-              <option>SQL</option>
-              <option>Data Processing</option>
+            <select 
+              value={filters.skill}
+              onChange={(e) => setFilters({ ...filters, skill: e.target.value })}
+            >
+              <option value="All">All</option>
+              <option value="Logic">Logic</option>
+              <option value="Strings">Strings</option>
+              <option value="SQL">SQL</option>
+              <option value="Data Processing">Data Processing</option>
             </select>
           </label>
           <label>Filter by Difficulty:
-            <select onChange={(e) => setFilters({ ...filters, difficulty: e.target.value })}>
-              <option>All</option>
-              <option>Easy</option>
-              <option>Medium</option>
-              <option>Hard</option>
+            <select 
+              value={filters.difficulty}
+              onChange={(e) => setFilters({ ...filters, difficulty: e.target.value })}
+            >
+              <option value="All">All</option>
+              <option value="Easy">Easy</option>
+              <option value="Medium">Medium</option>
+              <option value="Hard">Hard</option>
             </select>
           </label>
         </div>
       </div>
+      
       <div className="challenge-list">
         {filteredChallenges.length > 0 ? (
           filteredChallenges.map((c) => {
@@ -157,6 +166,7 @@ const navigate = useNavigate();
                 <p><strong>Start Time:</strong> {new Date(c.startTime).toLocaleString()}</p>
                 <p><strong>End Time:</strong> {new Date(c.endTime).toLocaleString()}</p>
                 <p><strong>Starts In:</strong> {countdowns[c.id] || 'Calculating...'}</p>
+                
                 <div className="challenge-metrics">
                   <div className="metric">
                     <div className="metric-label">👥 Participation: {stats.participation}%</div>
@@ -177,6 +187,7 @@ const navigate = useNavigate();
                     </div>
                   </div>
                 </div>
+                
                 <button
                   className="view-button"
                   onClick={() => handleViewChallenge(c.id)}
@@ -193,5 +204,5 @@ const navigate = useNavigate();
     </div>
   );
 };
- 
+
 export default HackathonPage;

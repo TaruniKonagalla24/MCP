@@ -5,6 +5,90 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/Hackathon/gethackathon": {
+      "post": {
+        "tags": [
+          "Hackathon"
+        ],
+        "parameters": [
+          {
+            "name": "hackathonid",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Hackathon/evaluateHackathon": {
+      "post": {
+        "tags": [
+          "Hackathon"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EvaluationDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EvaluationDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EvaluationDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Hackathon/submitHackathon": {
+      "post": {
+        "tags": [
+          "Hackathon"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubmitHackathon"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubmitHackathon"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubmitHackathon"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Hackathon/Getmyhackathons": {
       "post": {
         "tags": [
@@ -470,6 +554,27 @@
         }
       }
     },
+    "/api/User/generatereport": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "userid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/User/Upadateprofile": {
       "post": {
         "tags": [
@@ -516,6 +621,24 @@
             "nullable": true
           },
           "teamMajor": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EvaluationDTO": {
+        "type": "object",
+        "properties": {
+          "hackathonid": {
+            "type": "string",
+            "nullable": true
+          },
+          "answer": {
+            "type": "string",
+            "nullable": true
+          },
+          "programmingLanguage": {
             "type": "string",
             "nullable": true
           }
@@ -590,6 +713,28 @@
             "nullable": true
           },
           "hints": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SubmitHackathon": {
+        "type": "object",
+        "properties": {
+          "hackathonId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userid": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "score": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "messages": {
             "type": "string",
             "nullable": true
           }
