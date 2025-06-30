@@ -52,7 +52,7 @@ const HackathonPage = () => {
   }, []);
 
   const handleViewChallenge = (challengeId) => {
-    console.log('chalng from chlg scree:'+challengeId)
+    console.log('challenge IDs from challenge screen:'+challengeId)
     navigate(`/coding/${challengeId}`);
   };
 
@@ -124,6 +124,7 @@ const HackathonPage = () => {
     <div className="hackathon-page">
       <div className="hackathon-header">
         <h2>Hackathon Challenges</h2>
+        
         <div className="filters">
           <label>Filter by Skill:
             <select 
@@ -151,14 +152,14 @@ const HackathonPage = () => {
         </div>
       </div>
       
-      <div className="challenge-list">
+      <div className="challenge-list" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '20px' }}>
         {filteredChallenges.length > 0 ? (
           filteredChallenges.map((c) => {
             const stats = getHackathonStats(c.id);
             return (
               <div key={c.id} className="challenge-card">
                 <h3>{c.problem}</h3>
-                <p><strong>Skill:</strong> {c.skill}</p>
+                <p className="whitespace-normal break-words"><strong>Skill:</strong><span className="skill-text"> {c.skill}</span></p>
                 <p>
                   <strong>Difficulty:</strong>
                   <span className={getDifficultyClass(c.difficulty)}>{c.difficulty}</span>

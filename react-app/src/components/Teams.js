@@ -161,7 +161,7 @@ const Teams = () => {
   return (
     <div className="teams-page">
       <h2 className="teams-heading">🚀 Explore Teams</h2>
-      <div className="teams-controls">
+      {/* <div className="teams-controls">
         <div className="left-controls">
           <input
             type="text"
@@ -185,8 +185,87 @@ const Teams = () => {
         <div className="right-buttons">
           <button onClick={() => setShowCreateModal(true)}><FaPlus /> Create Team</button>
         </div>
-      </div>
-      
+      </div> */}
+     <div
+  style={{
+    display: 'flex',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    gap: '12px',
+    marginBottom: '20px',
+    width: '100%',
+    justifyContent: 'flex-start',
+  }}
+>
+  <input
+    type="text"
+    placeholder="Search teams..."
+    value={searchTerm}
+    onChange={(e) => setSearchTerm(e.target.value)}
+    style={{
+      padding: '8px 12px',
+      borderRadius: '8px',
+      border: '1px solid #ccc',
+      fontSize: '0.95rem',
+      width: '180px',
+    }}
+  />
+
+  <select
+    value={majorFilter}
+    onChange={(e) => setMajorFilter(e.target.value)}
+    style={{
+      padding: '8px 12px',
+      borderRadius: '8px',
+      border: '1px solid #ccc',
+      fontSize: '0.95rem',
+      width: '160px',
+    }}
+  >
+    <option value="">All Topics</option>
+    {teamMajors.map((major, index) => (
+      <option key={index} value={major}>{major}</option>
+    ))}
+  </select>
+
+  <select
+    value={dateFilter}
+    onChange={(e) => setDateFilter(e.target.value)}
+    style={{
+      padding: '8px 12px',
+      borderRadius: '8px',
+      border: '1px solid #ccc',
+      fontSize: '0.95rem',
+      width: '160px',
+    }}
+  >
+    <option value="">All Dates</option>
+    <option value="today">Today</option>
+    <option value="this-week">This Week</option>
+    <option value="this-month">This Month</option>
+  </select>
+
+  <button
+    onClick={() => setShowCreateModal(true)}
+    style={{
+      backgroundColor: '#3b82f6',
+      color: '#fff',
+      padding: '8px 14px',
+      borderRadius: '8px',
+      border: 'none',
+      fontSize: '0.9rem',
+      fontWeight: 'bold',
+      cursor: 'pointer',
+      display: 'flex',
+      alignItems: 'center',
+      whiteSpace: 'nowrap',
+    }}
+  >
+    <FaPlus style={{ marginRight: '6px' }} />
+    Create
+  </button>
+</div>
+
       <div className="team-grid">
         {filteredTeams.length === 0 ? (
           <p className="no-teams">No teams available</p>
