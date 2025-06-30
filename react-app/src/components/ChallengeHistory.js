@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './ChallengeHistory.css';
 import { FaCheckCircle, FaTimesCircle, FaHourglassHalf, FaRedo } from 'react-icons/fa';
 import api from '../api/axios'; 
-
+import { useNavigate } from 'react-router-dom';
 const getStatusIcon = (status) => {
   switch (status) {
     case 'completed':
@@ -19,12 +19,15 @@ const getStatusIcon = (status) => {
 const ChallengeHistory = () => {
   const [history, setHistory] = useState([]);
   const [loading, setLoading] = useState(true);
-
+const navigate = useNavigate();
   const getUserId = () => {
     const user = JSON.parse(localStorage.getItem('user'));
     return user?.id || 0;
   };
-
+const handleViewChallenge = (challengeId) => {
+    console.log('challenge IDs from challenge screen:'+challengeId)
+    navigate(`/coding/${challengeId}`);
+  };
   useEffect(() => {
     const fetchChallenges = async () => {
       try {
@@ -77,7 +80,7 @@ const ChallengeHistory = () => {
                 {challenge.score !== null ? `${challenge.score} pts` : '—'}
               </div>
               <div className="challenge-actions">
-                <button className="reattempt-btn" onClick={handleReattempt}>
+                <button className="reattempt-btn"onClick={() => handleViewChallenge(challenge.id)}>
                   <FaRedo /> Re-attempt
                 </button>
               </div>
