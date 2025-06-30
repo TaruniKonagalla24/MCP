@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\MCP\\BackendAPI\\MCP_API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9FA43542-C612-4136-ACD5-578B058D23C6}|MCP_API\\MCP_API.csproj|c:\\mcp\\backendapi\\mcp_api\\mcp_api\\sql\\hackathonsqlimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FA43542-C612-4136-ACD5-578B058D23C6}|MCP_API\\MCP_API.csproj|solutionrelative:mcp_api\\sql\\hackathonsqlimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9FA43542-C612-4136-ACD5-578B058D23C6}|MCP_API\\MCP_API.csproj|c:\\mcp\\backendapi\\mcp_api\\mcp_api\\sql\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9FA43542-C612-4136-ACD5-578B058D23C6}|MCP_API\\MCP_API.csproj|solutionrelative:mcp_api\\sql\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9FA43542-C612-4136-ACD5-578B058D23C6}|MCP_API\\MCP_API.csproj|c:\\mcp\\backendapi\\mcp_api\\mcp_api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9FA43542-C612-4136-ACD5-578B058D23C6}|MCP_API\\MCP_API.csproj|solutionrelative:mcp_api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FA43542-C612-4136-ACD5-578B058D23C6}|MCP_API\\MCP_API.csproj|c:\\mcp\\backendapi\\mcp_api\\mcp_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FA43542-C612-4136-ACD5-578B058D23C6}|MCP_API\\MCP_API.csproj|solutionrelative:mcp_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FA43542-C612-4136-ACD5-578B058D23C6}|MCP_API\\MCP_API.csproj|c:\\mcp\\backendapi\\mcp_api\\mcp_api\\properties\\publishprofiles\\hexawaremcp - web deploy.pubxml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{9FA43542-C612-4136-ACD5-578B058D23C6}|MCP_API\\MCP_API.csproj|solutionrelative:mcp_api\\properties\\publishprofiles\\hexawaremcp - web deploy.pubxml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9FA43542-C612-4136-ACD5-578B058D23C6}|MCP_API\\MCP_API.csproj|c:\\mcp\\backendapi\\mcp_api\\mcp_api\\aiconfig\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9FA43542-C612-4136-ACD5-578B058D23C6}|MCP_API\\MCP_API.csproj|c:\\mcp\\backendapi\\mcp_api\\mcp_api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{9FA43542-C612-4136-ACD5-578B058D23C6}|MCP_API\\MCP_API.csproj|solutionrelative:mcp_api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9FA43542-C612-4136-ACD5-578B058D23C6}|MCP_API\\MCP_API.csproj|c:\\mcp\\backendapi\\mcp_api\\mcp_api\\sql\\hackathonsqlimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9FA43542-C612-4136-ACD5-578B058D23C6}|MCP_API\\MCP_API.csproj|solutionrelative:mcp_api\\sql\\hackathonsqlimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9FA43542-C612-4136-ACD5-578B058D23C6}|MCP_API\\MCP_API.csproj|c:\\mcp\\backendapi\\mcp_api\\mcp_api\\controllers\\hackathoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -49,10 +57,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9FA43542-C612-4136-ACD5-578B058D23C6}|MCP_API\\MCP_API.csproj|c:\\mcp\\backendapi\\mcp_api\\mcp_api\\aiconfig\\evaluationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9FA43542-C612-4136-ACD5-578B058D23C6}|MCP_API\\MCP_API.csproj|solutionrelative:mcp_api\\aiconfig\\evaluationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9FA43542-C612-4136-ACD5-578B058D23C6}|MCP_API\\MCP_API.csproj|c:\\mcp\\backendapi\\mcp_api\\mcp_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9FA43542-C612-4136-ACD5-578B058D23C6}|MCP_API\\MCP_API.csproj|solutionrelative:mcp_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karth\\AppData\\Local\\Temp\\.vsdbgsrc\\4dcf567db33b8407e8e7e85491df71d46c06985d33f5ad8d904e52c3b325c6c5\\ExecutionContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -221,11 +225,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "HackathonsMasterDTO.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Models\\Tables\\HackathonsMasterDTO.cs",
               "RelativeDocumentMoniker": "MCP_API\\Models\\Tables\\HackathonsMasterDTO.cs",
@@ -234,11 +238,12 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-19T15:12:25.208Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "ResumeService.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\AiConfig\\ResumeService.cs",
               "RelativeDocumentMoniker": "MCP_API\\AiConfig\\ResumeService.cs",
@@ -247,11 +252,12 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-25T16:32:25.048Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "HackathonController.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Controllers\\HackathonController.cs",
               "RelativeDocumentMoniker": "MCP_API\\Controllers\\HackathonController.cs",
@@ -260,18 +266,17 @@
               "ViewState": "AgIAAHUAAAAAAAAAAAArwIEAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-22T11:45:17.083Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "HackathonSqlImpl.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\SQL\\HackathonSqlImpl.cs",
               "RelativeDocumentMoniker": "MCP_API\\SQL\\HackathonSqlImpl.cs",
               "ToolTip": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\SQL\\HackathonSqlImpl.cs",
               "RelativeToolTip": "MCP_API\\SQL\\HackathonSqlImpl.cs",
-              "ViewState": "AgIAALEAAAAAAAAAAAApwMcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIsAAAAAAAAAAAAcwJQAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-22T10:40:32.486Z",
               "IsPinned": true,
@@ -279,13 +284,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "MCP_API\\Controllers\\UserController.cs",
               "ToolTip": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Controllers\\UserController.cs",
               "RelativeToolTip": "MCP_API\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAD4v00AAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAuwE0AAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-19T15:57:59.343Z",
               "IsPinned": true,
@@ -293,7 +298,46 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StudentRepository.cs",
+              "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\SQL\\StudentRepository.cs",
+              "RelativeDocumentMoniker": "MCP_API\\SQL\\StudentRepository.cs",
+              "ToolTip": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\SQL\\StudentRepository.cs",
+              "RelativeToolTip": "MCP_API\\SQL\\StudentRepository.cs",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAiwJgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T15:46:57.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Program.cs",
+              "RelativeDocumentMoniker": "MCP_API\\Program.cs",
+              "ToolTip": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Program.cs",
+              "RelativeToolTip": "MCP_API\\Program.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABEAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T15:08:16.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HexawareMCP - Web Deploy.pubxml",
+              "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Properties\\PublishProfiles\\HexawareMCP - Web Deploy.pubxml",
+              "RelativeDocumentMoniker": "MCP_API\\Properties\\PublishProfiles\\HexawareMCP - Web Deploy.pubxml",
+              "ToolTip": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Properties\\PublishProfiles\\HexawareMCP - Web Deploy.pubxml",
+              "RelativeToolTip": "MCP_API\\Properties\\PublishProfiles\\HexawareMCP - Web Deploy.pubxml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2025-06-30T06:14:56.55Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\appsettings.json",
               "RelativeDocumentMoniker": "MCP_API\\appsettings.json",
@@ -301,47 +345,7 @@
               "RelativeToolTip": "MCP_API\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-19T15:08:31.804Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "StudentRepository.cs",
-              "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\SQL\\StudentRepository.cs",
-              "RelativeDocumentMoniker": "MCP_API\\SQL\\StudentRepository.cs",
-              "ToolTip": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\SQL\\StudentRepository.cs",
-              "RelativeToolTip": "MCP_API\\SQL\\StudentRepository.cs",
-              "ViewState": "AgIAAL4AAAAAAAAAAAAqwMgAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T15:46:57.561Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "MCP_API\\appsettings.Development.json",
-              "ToolTip": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\appsettings.Development.json",
-              "RelativeToolTip": "MCP_API\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-26T07:46:25.025Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "TeamSqlImp.cs",
-              "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\SQL\\TeamSqlImp.cs",
-              "RelativeDocumentMoniker": "MCP_API\\SQL\\TeamSqlImp.cs",
-              "ToolTip": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\SQL\\TeamSqlImp.cs",
-              "RelativeToolTip": "MCP_API\\SQL\\TeamSqlImp.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAqwD8AAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T11:14:47.988Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-19T15:08:31.804Z"
             },
             {
               "$type": "Bookmark",
@@ -349,7 +353,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "MCP_API\\appsettings.Development.json",
+              "ToolTip": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\appsettings.Development.json",
+              "RelativeToolTip": "MCP_API\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-26T07:46:25.025Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TeamSqlImp.cs",
+              "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\SQL\\TeamSqlImp.cs",
+              "RelativeDocumentMoniker": "MCP_API\\SQL\\TeamSqlImp.cs",
+              "ToolTip": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\SQL\\TeamSqlImp.cs",
+              "RelativeToolTip": "MCP_API\\SQL\\TeamSqlImp.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAqwD8AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T11:14:47.988Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "ReportService.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\AiConfig\\ReportService.cs",
               "RelativeDocumentMoniker": "MCP_API\\AiConfig\\ReportService.cs",
@@ -362,7 +390,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "ReportDTO.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Models\\DTO\\ReportDTO.cs",
               "RelativeDocumentMoniker": "MCP_API\\Models\\DTO\\ReportDTO.cs",
@@ -374,7 +402,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Repository\\IUserRepository.cs",
               "RelativeDocumentMoniker": "MCP_API\\Repository\\IUserRepository.cs",
@@ -386,7 +414,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "AddHackathonService.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\AiConfig\\AddHackathonService.cs",
               "RelativeDocumentMoniker": "MCP_API\\AiConfig\\AddHackathonService.cs",
@@ -394,11 +422,12 @@
               "RelativeToolTip": "MCP_API\\AiConfig\\AddHackathonService.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAkwCMAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T15:19:22.964Z"
+              "WhenOpened": "2025-06-26T15:19:22.964Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "EvaluationService.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\AiConfig\\EvaluationService.cs",
               "RelativeDocumentMoniker": "MCP_API\\AiConfig\\EvaluationService.cs",
@@ -411,19 +440,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Program.cs",
-              "RelativeDocumentMoniker": "MCP_API\\Program.cs",
-              "ToolTip": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Program.cs",
-              "RelativeToolTip": "MCP_API\\Program.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAACAAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T15:08:16.628Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "EvaluationDTO.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Models\\DTO\\EvaluationDTO.cs",
               "RelativeDocumentMoniker": "MCP_API\\Models\\DTO\\EvaluationDTO.cs",
@@ -431,11 +448,12 @@
               "RelativeToolTip": "MCP_API\\Models\\DTO\\EvaluationDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-29T10:39:26.26Z"
+              "WhenOpened": "2025-06-29T10:39:26.26Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "EvaluationresultDTO.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Models\\DTO\\EvaluationresultDTO.cs",
               "RelativeDocumentMoniker": "MCP_API\\Models\\DTO\\EvaluationresultDTO.cs",
@@ -443,11 +461,12 @@
               "RelativeToolTip": "MCP_API\\Models\\DTO\\EvaluationresultDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-29T10:48:05.857Z"
+              "WhenOpened": "2025-06-29T10:48:05.857Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "HackathonReportDTO.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Models\\DTO\\HackathonReportDTO.cs",
               "RelativeDocumentMoniker": "MCP_API\\Models\\DTO\\HackathonReportDTO.cs",
@@ -455,11 +474,12 @@
               "RelativeToolTip": "MCP_API\\Models\\DTO\\HackathonReportDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T04:03:42.522Z"
+              "WhenOpened": "2025-06-27T04:03:42.522Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "ActionMethodExecutor.cs",
               "DocumentMoniker": "C:\\Users\\karth\\AppData\\Local\\Temp\\.vsdbgsrc\\1cc6d2a634203e0de348b5980fee97b87977d5074b436e24ff974f8438968be4\\ActionMethodExecutor.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Users\\karth\\AppData\\Local\\Temp\\.vsdbgsrc\\1cc6d2a634203e0de348b5980fee97b87977d5074b436e24ff974f8438968be4\\ActionMethodExecutor.cs",
@@ -472,7 +492,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "ProgrssDTO.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Models\\DTO\\ProgrssDTO.cs",
               "RelativeDocumentMoniker": "MCP_API\\Models\\DTO\\ProgrssDTO.cs",
@@ -480,11 +500,12 @@
               "RelativeToolTip": "MCP_API\\Models\\DTO\\ProgrssDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T17:48:28.237Z"
+              "WhenOpened": "2025-06-26T17:48:28.237Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 54,
               "Title": "20250626171557_test24.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Migrations\\20250626171557_test24.cs",
               "RelativeDocumentMoniker": "MCP_API\\Migrations\\20250626171557_test24.cs",
@@ -496,7 +517,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "NewHackathon.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Models\\DTO\\NewHackathon.cs",
               "RelativeDocumentMoniker": "MCP_API\\Models\\DTO\\NewHackathon.cs",
@@ -504,11 +525,12 @@
               "RelativeToolTip": "MCP_API\\Models\\DTO\\NewHackathon.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T17:04:32.828Z"
+              "WhenOpened": "2025-06-26T17:04:32.828Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "ExecutionContext.cs",
               "DocumentMoniker": "C:\\Users\\karth\\AppData\\Local\\Temp\\.vsdbgsrc\\4dcf567db33b8407e8e7e85491df71d46c06985d33f5ad8d904e52c3b325c6c5\\ExecutionContext.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Users\\karth\\AppData\\Local\\Temp\\.vsdbgsrc\\4dcf567db33b8407e8e7e85491df71d46c06985d33f5ad8d904e52c3b325c6c5\\ExecutionContext.cs",
@@ -520,7 +542,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "AdminDashboardDTO.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Models\\DTO\\AdminDashboardDTO.cs",
               "RelativeDocumentMoniker": "MCP_API\\Models\\DTO\\AdminDashboardDTO.cs",
@@ -532,7 +554,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "Task.cs",
               "DocumentMoniker": "C:\\Users\\karth\\AppData\\Local\\Temp\\.vsdbgsrc\\b3ab4fb85b206f2413edb729cada949a41704b6f8655f0c544f8427c6a3a5c21\\Task.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Users\\karth\\AppData\\Local\\Temp\\.vsdbgsrc\\b3ab4fb85b206f2413edb729cada949a41704b6f8655f0c544f8427c6a3a5c21\\Task.cs",
@@ -544,7 +566,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "StudentRepository.cs",
               "DocumentMoniker": "C:\\Users\\karth\\AppData\\Local\\SourceServer\\3bc179835f91172dbd9fa47efac2a535cffd8479d1c889086ca138b593f8d53d\\BackendAPI\\MCP_API\\MCP_API\\SQL\\StudentRepository.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Users\\karth\\AppData\\Local\\SourceServer\\3bc179835f91172dbd9fa47efac2a535cffd8479d1c889086ca138b593f8d53d\\BackendAPI\\MCP_API\\MCP_API\\SQL\\StudentRepository.cs",
@@ -552,12 +574,11 @@
               "RelativeToolTip": "..\\..\\..\\Users\\karth\\AppData\\Local\\SourceServer\\3bc179835f91172dbd9fa47efac2a535cffd8479d1c889086ca138b593f8d53d\\BackendAPI\\MCP_API\\MCP_API\\SQL\\StudentRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEwAAAAiAAAAAQAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T16:40:12.009Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-24T16:40:12.009Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "GetHackathons.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Models\\DTO\\GetHackathons.cs",
               "RelativeDocumentMoniker": "MCP_API\\Models\\DTO\\GetHackathons.cs",
@@ -565,11 +586,12 @@
               "RelativeToolTip": "MCP_API\\Models\\DTO\\GetHackathons.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T10:37:50.103Z"
+              "WhenOpened": "2025-06-22T10:37:50.103Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "CreateTeam.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Models\\DTO\\CreateTeam.cs",
               "RelativeDocumentMoniker": "MCP_API\\Models\\DTO\\CreateTeam.cs",
@@ -577,11 +599,12 @@
               "RelativeToolTip": "MCP_API\\Models\\DTO\\CreateTeam.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T11:12:13.899Z"
+              "WhenOpened": "2025-06-22T11:12:13.899Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "DashboardDTO.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Models\\DTO\\DashboardDTO.cs",
               "RelativeDocumentMoniker": "MCP_API\\Models\\DTO\\DashboardDTO.cs",
@@ -593,7 +616,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "ITeams.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Repository\\ITeams.cs",
               "RelativeDocumentMoniker": "MCP_API\\Repository\\ITeams.cs",
@@ -605,7 +628,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "UpdateProfileDTO.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Models\\DTO\\UpdateProfileDTO.cs",
               "RelativeDocumentMoniker": "MCP_API\\Models\\DTO\\UpdateProfileDTO.cs",
@@ -613,11 +636,12 @@
               "RelativeToolTip": "MCP_API\\Models\\DTO\\UpdateProfileDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T15:56:10.384Z"
+              "WhenOpened": "2025-06-22T15:56:10.384Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "MCP_API.csproj",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\MCP_API.csproj",
               "RelativeDocumentMoniker": "MCP_API\\MCP_API.csproj",
@@ -625,11 +649,12 @@
               "RelativeToolTip": "MCP_API\\MCP_API.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-23T05:44:47.077Z"
+              "WhenOpened": "2025-06-23T05:44:47.077Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "ChallengeDTO.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Models\\DTO\\ChallengeDTO.cs",
               "RelativeDocumentMoniker": "MCP_API\\Models\\DTO\\ChallengeDTO.cs",
@@ -637,11 +662,12 @@
               "RelativeToolTip": "MCP_API\\Models\\DTO\\ChallengeDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T16:31:13.29Z"
+              "WhenOpened": "2025-06-24T16:31:13.29Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "TeamController.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Controllers\\TeamController.cs",
               "RelativeDocumentMoniker": "MCP_API\\Controllers\\TeamController.cs",
@@ -653,7 +679,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "IHackathonMaster.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Repository\\IHackathonMaster.cs",
               "RelativeDocumentMoniker": "MCP_API\\Repository\\IHackathonMaster.cs",
@@ -665,7 +691,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "HackathonDTO.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Models\\Tables\\HackathonDTO.cs",
               "RelativeDocumentMoniker": "MCP_API\\Models\\Tables\\HackathonDTO.cs",
@@ -673,11 +699,12 @@
               "RelativeToolTip": "MCP_API\\Models\\Tables\\HackathonDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T15:12:56.257Z"
+              "WhenOpened": "2025-06-19T15:12:56.257Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "UserDTO.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Models\\Tables\\UserDTO.cs",
               "RelativeDocumentMoniker": "MCP_API\\Models\\Tables\\UserDTO.cs",
@@ -685,11 +712,12 @@
               "RelativeToolTip": "MCP_API\\Models\\Tables\\UserDTO.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAiwBkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T15:11:25.784Z"
+              "WhenOpened": "2025-06-19T15:11:25.784Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "AddHackathonmaster.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Models\\DTO\\AddHackathonmaster.cs",
               "RelativeDocumentMoniker": "MCP_API\\Models\\DTO\\AddHackathonmaster.cs",
@@ -697,11 +725,12 @@
               "RelativeToolTip": "MCP_API\\Models\\DTO\\AddHackathonmaster.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T14:21:20.28Z"
+              "WhenOpened": "2025-06-21T14:21:20.28Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "LoginDTO.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Models\\DTO\\LoginDTO.cs",
               "RelativeDocumentMoniker": "MCP_API\\Models\\DTO\\LoginDTO.cs",
@@ -709,11 +738,12 @@
               "RelativeToolTip": "MCP_API\\Models\\DTO\\LoginDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T15:49:14.286Z"
+              "WhenOpened": "2025-06-19T15:49:14.286Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "HackathonStatus.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Models\\DTO\\HackathonStatus.cs",
               "RelativeDocumentMoniker": "MCP_API\\Models\\DTO\\HackathonStatus.cs",
@@ -721,11 +751,12 @@
               "RelativeToolTip": "MCP_API\\Models\\DTO\\HackathonStatus.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T13:38:32.532Z"
+              "WhenOpened": "2025-06-22T13:38:32.532Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "JoinTeam.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Models\\DTO\\JoinTeam.cs",
               "RelativeDocumentMoniker": "MCP_API\\Models\\DTO\\JoinTeam.cs",
@@ -733,11 +764,12 @@
               "RelativeToolTip": "MCP_API\\Models\\DTO\\JoinTeam.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T12:05:37.201Z"
+              "WhenOpened": "2025-06-22T12:05:37.201Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "SummaryDto.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Models\\Tables\\SummaryDto.cs",
               "RelativeDocumentMoniker": "MCP_API\\Models\\Tables\\SummaryDto.cs",
@@ -745,11 +777,12 @@
               "RelativeToolTip": "MCP_API\\Models\\Tables\\SummaryDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T08:39:15.168Z"
+              "WhenOpened": "2025-06-22T08:39:15.168Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 53,
               "Title": "20250622114957_SD changes2.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Migrations\\20250622114957_SD changes2.cs",
               "RelativeDocumentMoniker": "MCP_API\\Migrations\\20250622114957_SD changes2.cs",
@@ -761,7 +794,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "MyTeams.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Models\\DTO\\MyTeams.cs",
               "RelativeDocumentMoniker": "MCP_API\\Models\\DTO\\MyTeams.cs",
@@ -769,11 +802,12 @@
               "RelativeToolTip": "MCP_API\\Models\\DTO\\MyTeams.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T11:06:30.344Z"
+              "WhenOpened": "2025-06-22T11:06:30.344Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "Teams.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Models\\Tables\\Teams.cs",
               "RelativeDocumentMoniker": "MCP_API\\Models\\Tables\\Teams.cs",
@@ -781,11 +815,12 @@
               "RelativeToolTip": "MCP_API\\Models\\Tables\\Teams.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T08:46:57.928Z"
+              "WhenOpened": "2025-06-22T08:46:57.928Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "TeamMaster.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Models\\Tables\\TeamMaster.cs",
               "RelativeDocumentMoniker": "MCP_API\\Models\\Tables\\TeamMaster.cs",
@@ -793,11 +828,12 @@
               "RelativeToolTip": "MCP_API\\Models\\Tables\\TeamMaster.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T08:45:36.339Z"
+              "WhenOpened": "2025-06-22T08:45:36.339Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "MCP_API\\Data\\ApplicationDbContext.cs",
@@ -809,7 +845,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "OverallLeaderboardDTO.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Models\\DTO\\OverallLeaderboardDTO.cs",
               "RelativeDocumentMoniker": "MCP_API\\Models\\DTO\\OverallLeaderboardDTO.cs",
@@ -817,11 +853,12 @@
               "RelativeToolTip": "MCP_API\\Models\\DTO\\OverallLeaderboardDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T09:25:16.688Z"
+              "WhenOpened": "2025-06-22T09:25:16.688Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "ApplicationDbContextModelSnapshot.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Migrations\\ApplicationDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "MCP_API\\Migrations\\ApplicationDbContextModelSnapshot.cs",
@@ -833,7 +870,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 52,
               "Title": "20250621144403_null changes.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Migrations\\20250621144403_null changes.cs",
               "RelativeDocumentMoniker": "MCP_API\\Migrations\\20250621144403_null changes.cs",
@@ -841,11 +878,12 @@
               "RelativeToolTip": "MCP_API\\Migrations\\20250621144403_null changes.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T14:44:04.135Z"
+              "WhenOpened": "2025-06-21T14:44:04.135Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "RegisterDTO.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Models\\DTO\\RegisterDTO.cs",
               "RelativeDocumentMoniker": "MCP_API\\Models\\DTO\\RegisterDTO.cs",
@@ -853,11 +891,12 @@
               "RelativeToolTip": "MCP_API\\Models\\DTO\\RegisterDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T09:50:47.731Z"
+              "WhenOpened": "2025-06-20T09:50:47.731Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 51,
               "Title": "20250620110240_test.cs",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Migrations\\20250620110240_test.cs",
               "RelativeDocumentMoniker": "MCP_API\\Migrations\\20250620110240_test.cs",
@@ -865,22 +904,24 @@
               "RelativeToolTip": "MCP_API\\Migrations\\20250620110240_test.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T11:02:40.3Z"
+              "WhenOpened": "2025-06-20T11:02:40.3Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 49,
               "Title": "MCP_API",
               "DocumentMoniker": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\MCP_API.csproj",
               "RelativeDocumentMoniker": "MCP_API\\MCP_API.csproj",
               "ToolTip": "C:\\MCP\\BackendAPI\\MCP_API\\MCP_API\\MCP_API.csproj",
               "RelativeToolTip": "MCP_API\\MCP_API.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-21T02:49:04.479Z"
+              "WhenOpened": "2025-06-21T02:49:04.479Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 50,
               "Title": "20250619151724_initial.cs",
               "DocumentMoniker": "C:\\Projects\\MCP\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Migrations\\20250619151724_initial.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Projects\\MCP\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Migrations\\20250619151724_initial.cs",

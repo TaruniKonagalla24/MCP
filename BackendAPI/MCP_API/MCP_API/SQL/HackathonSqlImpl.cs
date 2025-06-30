@@ -149,6 +149,14 @@ namespace MCP_API.SQL
                 description = input.description,
                 hints=input.hints
             };
+            SummaryDto sd = new SummaryDto();
+                sd.Created = DateTime.Now;
+                sd.Username = "Admin";
+                sd.userid =1;
+                sd.Summary = "Created a New Challenge "+ input.Problem;
+                await applicationDbContext.Summary.AddAsync(sd);
+
+            
             await applicationDbContext.HackathonsMaster.AddAsync(dt);
             applicationDbContext.SaveChanges();
 
