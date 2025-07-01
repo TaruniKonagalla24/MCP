@@ -91,7 +91,7 @@ const Settings = () => {
 
   return (
     <div className="settings-container">
-      <h2 style={{ fontWeight: 'bold' }}>
+      <h2 style={{ fontWeight: 'bold', fontSize: '24px' }}>
           <FaCog style={{ marginRight: '10px', color: '#4FD1C5' }} />
         User Settings</h2>
       

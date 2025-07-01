@@ -217,29 +217,81 @@ const generateAIReport = async () => {
 
   return (
     <div className="dashboard-container">
-      <div className="dashboard-header">
-        <h2>Welcome {user?.username} to Mavericks Coding Platform</h2>
-        <div className="header-buttons">
-          <button 
-         
-            onClick={generateAIReport}
-            disabled={generatingReport}
-          >
-            {generatingReport ? (
-              <span>
-                <span ></span> Generating...
-              </span>
-            ) : (
-              <>
-                <FaFilePdf /> Generate AI Report
-              </>
-            )}
-          </button>
-          <button  onClick={handleLogout}>
-            <FaSignOutAlt /> Logout
-          </button>
-        </div>
-      </div>
+      <div
+  style={{
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    marginBottom: '20px',
+  }}
+>
+  <h2
+    style={{
+      flex: 1,
+      textAlign: 'center',
+      fontSize: '1.5rem',
+      fontWeight: 'bold',
+      margin: '0',
+    }}
+  >
+    Welcome {user?.username} to Mavericks Coding Platform
+  </h2>
+
+  <div
+  style={{
+    display: 'flex',
+    gap: '10px',
+  }}
+>
+  <button
+    onClick={generateAIReport}
+    disabled={generatingReport}
+    style={{
+      backgroundColor: '#3b82f6',
+      color: '#fff',
+      border: 'none',
+      padding: '6px 10px',
+      borderRadius: '6px',
+      fontSize: '0.85rem',
+      fontWeight: '500',
+      cursor: 'pointer',
+      display: 'flex',
+      alignItems: 'center',
+      gap: '5px',
+    }}
+  >
+    {generatingReport ? (
+      <span>Generating...</span>
+    ) : (
+      <>
+        <FaFilePdf /> Generate AI Report
+      </>
+    )}
+  </button>
+
+  <button
+    onClick={handleLogout}
+    style={{
+      backgroundColor: '#dc2626',
+      color: '#fff',
+      border: 'none',
+      padding: '6px 10px',
+      borderRadius: '6px',
+      fontSize: '0.85rem',
+      fontWeight: '500',
+      cursor: 'pointer',
+      display: 'flex',
+      alignItems: 'center',
+      gap: '5px',
+    }}
+  >
+    <FaSignOutAlt /> Logout
+  </button>
+</div>
+
+</div>
+
 
       <div className="dashboard-grid">
         {/* Row 1 - Full width */}
