@@ -24,6 +24,8 @@ namespace MCP_API.AiConfig
                 obj.prompt = input;
                 var response = await _httpClient.PostAsJsonAsync(AI_URL + "assessment/start", obj);
                 var responseContent = await response.Content.ReadAsStringAsync();
+                responseContent=responseContent.Replace("[", "");
+                responseContent = responseContent.Replace("]", "");
                 response.EnsureSuccessStatusCode();
                 var parsed = JsonConvert.DeserializeObject<EvaluationresultDTO>(responseContent);
 
