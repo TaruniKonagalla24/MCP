@@ -136,7 +136,7 @@ const AdminHackathons = ({ setIsLoggedIn, setUserRole }) => {
     <div className="admin-hackathon-page">
       {/* <div className="admin-hackathons-container"> */}
         <div className="hackathon-dashboard-header">
-          <h2>🎓 Hackathon Management</h2>
+          <h2 style={{ fontWeight: 'bold' }}>🎓 Hackathon Management</h2>
           <button className="logout-button" onClick={handleLogout}>
             <FaSignOutAlt /> Logout
           </button>

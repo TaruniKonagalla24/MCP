@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './HackathonPage.css';
 import api from '../api/axios';
 import { useNavigate } from 'react-router-dom';
+import { FaTrophy } from 'react-icons/fa';
 
 const HackathonPage = () => {
   const [filters, setFilters] = useState({ skill: 'All', difficulty: 'All' });
@@ -123,7 +124,9 @@ const HackathonPage = () => {
   return (
     <div className="hackathon-page">
       <div className="hackathon-header">
-        <h2>Hackathon Challenges</h2>
+        <h2 style={{ fontWeight: 'bold' }}>
+           <FaTrophy style={{ marginRight: '10px', color: '#F6AD55' }} />
+          Hackathon Challenges</h2>
         
         <div className="filters">
           <label>Filter by Skill:

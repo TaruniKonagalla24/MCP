@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './AdminUsers.css';
 import api from '../api/axios';
+import { FaUsers } from 'react-icons/fa';
 const AdminUsers = () => {
  const [users, setUsers] = useState([]);
  const [filters, setFilters] = useState({
@@ -57,7 +58,9 @@ const AdminUsers = () => {
  return (
 <div className="admin-users-wrapper">
 <div className="admin-users-container">
-<h2 className="admin-users-title">Users & Progress</h2>
+<h2 className="admin-users-title" style={{ fontWeight: 'bold' }}>
+   <FaUsers style={{ marginRight: '10px', color: '#4A90E2' }} />
+  Users & Progress</h2>
 <div className="filter-bar">
 <input
            type="text"

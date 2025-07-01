@@ -22,7 +22,7 @@ const UserDashboard = () => {
   return (
     <div className="dashboard-container">
       <aside className="sidebar">
-        <div className="sidebar-title">Mavericks Coding Platform</div>
+        <div className="sidebar-title" style={{ fontWeight: 'bold' }}>Mavericks Coding Platform</div>
         <ul className="sidebar-menu">
           <li><FaHome /> Home</li>
           <li><FaClipboardList /> Challenges</li>

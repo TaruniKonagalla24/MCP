@@ -160,7 +160,7 @@ const Teams = () => {
 
   return (
     <div className="teams-page">
-      <h2 className="teams-heading">🚀 Explore Teams</h2>
+      <h2 className="teams-heading" style={{ fontWeight: 'bold' }}>🚀 Explore Teams</h2>
       {/* <div className="teams-controls">
         <div className="left-controls">
           <input

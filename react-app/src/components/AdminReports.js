@@ -77,7 +77,7 @@ const AdminReports = ({ setIsLoggedIn, setUserRole }) => {
     <div className="admin-reports-wrapper">
       <div className="admin-reports-container">
         <div className="dashboard-header">
-          <h2>📊 Reports & Analytics</h2>
+          <h2 style={{ fontWeight: 'bold' }}>📊 Reports & Analytics</h2>
           <button className="logout-button" onClick={handleLogout}>
             <FaSignOutAlt /> Logout
           </button>

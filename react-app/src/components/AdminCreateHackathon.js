@@ -78,7 +78,7 @@ const AdminCreateHackathon = () => {
   return (
     <div className="admin-create-hackathon">
       <div className="create-hackathon-container">
-       <div className="create-width"><h2>
+       <div className="create-width"><h2 style={{ fontWeight: 'bold' }}>
   <FaRocket style={{ marginRight: '10px', color: '#4299e1' }} />
   Create New Hackathon Challenge
 </h2></div>

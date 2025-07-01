@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './ChallengeHistory.css';
-import { FaCheckCircle, FaTimesCircle, FaHourglassHalf, FaRedo } from 'react-icons/fa';
+import { FaCheckCircle, FaTimesCircle, FaHourglassHalf, FaRedo,FaHistory } from 'react-icons/fa';
 import api from '../api/axios'; 
 import { useNavigate } from 'react-router-dom';
 const getStatusIcon = (status) => {
@@ -63,7 +63,9 @@ const handleViewChallenge = (challengeId) => {
 
   return (
     <div className="challenge-history-container">
-      <h2 className="history-heading">Challenge History</h2>
+      <h2 className="history-heading" style={{ fontWeight: 'bold' }}>
+        <FaHistory style={{ marginRight: '10px', color: '#718096' }} />
+        Challenge History</h2>
       <div className="history-table">
         {history.map((challenge, index) => {
           const status = mapStatus(challenge.result, challenge.score);

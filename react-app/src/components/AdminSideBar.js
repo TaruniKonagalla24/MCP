@@ -6,7 +6,7 @@ import './AdminSideBar.css';
 function AdminSidebar() {
   return (
     <div className="sidebar">
-      <h2>Admin Panel</h2>
+      <h2 style={{ fontWeight: 'bold' }}>Admin Panel</h2>
       <ul>
         <li><NavLink to="/admin-dashboard"><Home /> Dashboard</NavLink></li>
         <li><NavLink to="/admin/users-progress"><Users /> Users Progress</NavLink></li>

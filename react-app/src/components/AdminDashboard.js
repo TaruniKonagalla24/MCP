@@ -60,7 +60,7 @@ const AdminDashboard = ({ setIsLoggedIn, setUserRole }) => {
   return (
     <div className="admin-dashboard-content">
       <div className="dashboard-header">
-        <h2>Admin Dashboard</h2>
+        <h2 style={{ fontWeight: 'bold' }}>Admin Dashboard</h2>
         <button className="logout-button" onClick={handleLogout}>
           <FaSignOutAlt /> Logout
         </button>

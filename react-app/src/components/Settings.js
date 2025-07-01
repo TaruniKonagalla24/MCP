@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Settings.css';
 import api from '../api/axios'; 
-import { FaLinkedin, FaGithub, FaSave, FaUser, FaGraduationCap, FaCode } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaSave, FaUser, FaGraduationCap, FaCode,FaCog } from 'react-icons/fa';
 
 const Settings = () => {
   const [user, setUser] = useState(null);
@@ -86,12 +86,14 @@ const Settings = () => {
     }
   };
 
-  if (loading) return <div className="settings-container">Loading user data...</div>;
+  if (loading) return <div className="settings-container" >Loading user data...</div>;
   if (!user) return <div className="settings-container">User not found</div>;
 
   return (
     <div className="settings-container">
-      <h2>User Settings</h2>
+      <h2 style={{ fontWeight: 'bold' }}>
+          <FaCog style={{ marginRight: '10px', color: '#4FD1C5' }} />
+        User Settings</h2>
       
       {error && <div className="alert error">{error}</div>}
       {success && <div className="alert success">{success}</div>}

@@ -1,9 +1,10 @@
 .settings-container {
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
   padding: 2rem;
   font-family: 'Segoe UI', sans-serif;
+  
 }
 
 .settings-container h2 {
@@ -15,9 +16,8 @@
 }
 
 .settings-grid {
-  width: 100%;
+  width: 90%;
   max-width: 1200px;
-  margin-left: 6rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
