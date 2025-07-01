@@ -10,6 +10,7 @@ namespace MCP_API.Repository
         Task newhackathon(NewHackathon inp);
         Task <HackathonsMasterDTO> gethackathon(string id);
         Task <EvaluationresultDTO> evaluateHackathon(EvaluationDTO input) ;
+        Task<caOutputDTO> chatbot(CAinputDTO input);
         Task submitHackathon(SubmitHackathon input);
 
         Task<AdminDashboardDTO> admindashboard();
