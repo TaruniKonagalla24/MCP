@@ -330,18 +330,51 @@ const generateAIReport = async () => {
           </ul>
         </div>
 
-        <div className="dashboard-card">
-          <h3>🏅 Your Badges</h3>
-          <div className="badge-list">
-            {userBadges.length > 0 ? (
-              userBadges.map((badge, index) => (
-                <span key={index} className="badge">🏅 {badge}</span>
-              ))
-            ) : (
-              <span>No badges earned yet</span>
-            )}
-          </div>
-        </div>
+       <div className="dashboard-card" style={{ position: 'relative', padding: '20px' }}>
+  <h3 style={{ marginBottom: '15px' }}>🏅 Your Badges</h3>
+
+  <div
+    className="badge-list"
+    style={{
+      display: 'flex',
+      flexWrap: 'wrap',
+      gap: '12px',
+      justifyContent: 'flex-start'
+    }}
+  >
+    {userBadges.length > 0 ? (
+      userBadges.map((badge, index) => {
+        const icons = ['🚀', '💡', '🔥', '⭐', '🏆', '⚡'];
+        const randomIcon = icons[index % icons.length]; // loop over icons
+
+        return (
+          <span
+            key={index}
+            style={{
+              background: '#f1f5f9',
+              color: '#1e293b',
+              padding: '6px 12px',
+              borderRadius: '12px',
+              fontSize: '14px',
+              fontWeight: '500',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '6px',
+              boxShadow: '0 2px 5px rgba(0,0,0,0.05)'
+            }}
+          >
+            <span>{randomIcon}</span>
+            {badge}
+          </span>
+        );
+      })
+    ) : (
+      <span style={{ fontSize: '14px', color: '#6b7280' }}>No badges earned yet</span>
+    )}
+  </div>
+</div>
+
+
       </div>
     </div>
   );
