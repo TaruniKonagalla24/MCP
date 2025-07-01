@@ -227,6 +227,17 @@ namespace MCP_API.SQL
             return output;
            
         }
+        async Task<caOutputDTO> IHackathonMaster.chatbot(CAinputDTO input)
+        {
+            HackathonsMasterDTO hack = await applicationDbContext.HackathonsMaster.FirstOrDefaultAsync(h => h.Id.ToString() == input.hackathonid);
+            string temp = Newtonsoft.Json.JsonConvert.SerializeObject(hack);
+            string temp2 = Newtonsoft.Json.JsonConvert.SerializeObject(input);
+            string inputstring = "you are a coding assitant chat bot this the poblem user solving  " + temp + "an the input from the user and query is " + temp2 + "  Return a single valid JSON object with these **exact field name** only:  messages . help user where he is stuckwith hints like wherr he is stuck and please dont give full answer, please dont add like this content or role i just need the raw json with messages, its not a list im deserializing as a string just string   No comments, no explanation, just raw JSON inside a code block.";
+            // logic to be builded
+            caOutputDTO output = await EvalualteHackahon.Caimplementation(inputstring);
+            return output;
+
+        }
 
         async Task IHackathonMaster.submitHackathon(SubmitHackathon input)
         {

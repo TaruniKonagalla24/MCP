@@ -15,8 +15,90 @@ const languageExtensions = {
   cpp: cpp(),
 };
 
+const ChatBot = ({ isOpen, onClose, hackathonId, code, language }) => {
+  // Get user data from localStorage
+  const user = JSON.parse(localStorage.getItem('user'));
+  const username = user?.username || 'there';
+  
+  const [messages, setMessages] = useState([
+    { text: `Hi ${username}, how can I help today?`, sender: 'bot' }
+  ]);
+  const [inputMessage, setInputMessage] = useState('');
+  const [isTyping, setIsTyping] = useState(false);
+
+  const handleSendMessage = async () => {
+    if (inputMessage.trim() === '') return;
+    
+    // Add user message
+    const userMessage = inputMessage;
+    setMessages(prev => [...prev, { text: userMessage, sender: 'user' }]);
+    setInputMessage('');
+    setIsTyping(true);
+    
+    try {
+      // Add temporary "typing" message
+      setMessages(prev => [...prev, { text: 'Typing...', sender: 'bot', isTyping: true }]);
+      
+      const response = await api.post('/Hackathon/Chatbot', {
+        usermessage: userMessage,
+        hackathonid: hackathonId,
+        answer: code,
+        programmingLanguage: language
+      });
+
+      // Remove typing indicator and add actual response
+      setMessages(prev => prev.filter(msg => !msg.isTyping));
+      setMessages(prev => [...prev, { text: response.data.messages, sender: 'bot' }]);
+    } catch (err) {
+      // Remove typing indicator and show error
+      setMessages(prev => prev.filter(msg => !msg.isTyping));
+      setMessages(prev => [...prev, { 
+        text: `Sorry, I encountered an error: ${err.message}`, 
+        sender: 'bot' 
+      }]);
+    } finally {
+      setIsTyping(false);
+    }
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleSendMessage();
+    }
+  };
+
+  return (
+    <div className={`chatbot-container ${isOpen ? 'open' : ''}`}>
+      <div className="chatbot-header">
+        <h3>Coding Assistant</h3>
+        <button onClick={onClose} className="chatbot-close-btn">×</button>
+      </div>
+      <div className="chatbot-messages">
+        {messages.map((message, index) => (
+          <div key={index} className={`message ${message.sender} ${message.isTyping ? 'typing' : ''}`}>
+            {message.text}
+          </div>
+        ))}
+      </div>
+      <div className="chatbot-input">
+        <input
+          type="text"
+          value={inputMessage}
+          onChange={(e) => setInputMessage(e.target.value)}
+          onKeyPress={handleKeyPress}
+          placeholder="Type your message..."
+          disabled={isTyping}
+        />
+        <button onClick={handleSendMessage} disabled={isTyping}>
+          {isTyping ? '...' : 'Send'}
+        </button>
+      </div>
+    </div>
+  );
+};
+
 const CodingPage = () => {
-  const { challengeId  } = useParams(); // this gives you the challenge id from URL
+  const { challengeId } = useParams();
   const [code, setCode] = useState('// Start coding here');
   const [language, setLanguage] = useState('javascript');
   const [showHint, setShowHint] = useState(false);
@@ -25,14 +107,15 @@ const CodingPage = () => {
   const [problemData, setProblemData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [showChatbot, setShowChatbot] = useState(false);
 
   useEffect(() => {
     const fetchProblemData = async () => {
       try {
-       console.log('data received:'+challengeId )
+        console.log('data received:' + challengeId)
         const response = await api.post('/Hackathon/gethackathon', null, {
           params: {
-            hackathonid: challengeId 
+            hackathonid: challengeId
           }
         });
         setProblemData(response.data);
@@ -44,12 +127,12 @@ const CodingPage = () => {
     };
 
     fetchProblemData();
-  }, [challengeId ]);
+  }, [challengeId]);
 
   const handleRun = async () => {
     try {
       const response = await api.post('/Hackathon/evaluateHackathon', {
-        hackathonid: challengeId ,
+        hackathonid: challengeId,
         answer: code,
         programmingLanguage: language
       });
@@ -64,18 +147,16 @@ const CodingPage = () => {
 
   const handleSubmit = async () => {
     try {
-        const userData = JSON.parse(localStorage.getItem('user'));      // First evaluate to get the score
+      const userData = JSON.parse(localStorage.getItem('user'));
       const evalResponse = await api.post('/Hackathon/evaluateHackathon', {
-        hackathonid: challengeId ,
+        hackathonid: challengeId,
         answer: code,
         programmingLanguage: language
       });
 
-      // Then submit the result
       await api.post('/Hackathon/submitHackathon', {
-        hackathonId: parseInt(challengeId ),
-        
-        userid: userData.id, // You should replace this with actual user ID from your auth system
+        hackathonId: parseInt(challengeId),
+        userid: userData.id,
         score: evalResponse.data.score,
         messages: evalResponse.data.messages
       });
@@ -100,7 +181,6 @@ const CodingPage = () => {
     return <div className="coding-page">No problem data found</div>;
   }
 
-  // Parse test cases if they're stored as a string
   let testCases = [];
   try {
     testCases = JSON.parse(problemData.testCases);
@@ -161,6 +241,25 @@ const CodingPage = () => {
           </div>
         )}
       </div>
+      
+      {/* Chatbot toggle button */}
+      {!showChatbot && (
+        <button 
+          className="chatbot-toggle-btn"
+          onClick={() => setShowChatbot(true)}
+        >
+          Need Help?
+        </button>
+      )}
+      
+      {/* Chatbot component */}
+      <ChatBot 
+        isOpen={showChatbot} 
+        onClose={() => setShowChatbot(false)}
+        hackathonId={challengeId}
+        code={code}
+        language={language}
+      />
     </div>
   );
 };

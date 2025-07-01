@@ -38,6 +38,28 @@ namespace MCP_API.AiConfig
                 throw;
             }
         }
+        public async Task<caOutputDTO> Caimplementation(string input)
+        {
+            try
+            {
+                httinput obj = new httinput();
+                obj.prompt = input;
+                var response = await _httpClient.PostAsJsonAsync(AI_URL + "assessment/start", obj);
+                var responseContent = await response.Content.ReadAsStringAsync();
+                responseContent = responseContent.Replace("[", "");
+                responseContent = responseContent.Replace("]", "");
+                response.EnsureSuccessStatusCode();
+                var parsed = JsonConvert.DeserializeObject<caOutputDTO>(responseContent);
+
+
+                return parsed;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error in chatbot");
+                throw;
+            }
+        }
     }
     public class httinput
     {

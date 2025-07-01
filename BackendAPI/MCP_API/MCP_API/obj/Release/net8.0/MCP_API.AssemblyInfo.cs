@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MCP_API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7bb6a2627ffd7816ef32072a3bcac0ab1805fe9e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a3faa927e758437f7780dee69dead503f9f579a9")]
 [assembly: System.Reflection.AssemblyProductAttribute("MCP_API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MCP_API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

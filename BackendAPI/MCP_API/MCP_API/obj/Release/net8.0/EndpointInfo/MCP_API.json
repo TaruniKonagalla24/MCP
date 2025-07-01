@@ -58,6 +58,37 @@
         }
       }
     },
+    "/api/Hackathon/Chatbot": {
+      "post": {
+        "tags": [
+          "Hackathon"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CAinputDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CAinputDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CAinputDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Hackathon/submitHackathon": {
       "post": {
         "tags": [
@@ -609,6 +640,28 @@
   },
   "components": {
     "schemas": {
+      "CAinputDTO": {
+        "type": "object",
+        "properties": {
+          "usermessage": {
+            "type": "string",
+            "nullable": true
+          },
+          "hackathonid": {
+            "type": "string",
+            "nullable": true
+          },
+          "answer": {
+            "type": "string",
+            "nullable": true
+          },
+          "programmingLanguage": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "CreateTeam": {
         "type": "object",
         "properties": {

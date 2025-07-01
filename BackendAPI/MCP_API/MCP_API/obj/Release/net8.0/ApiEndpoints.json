@@ -21,6 +21,22 @@
   },
   {
     "ContainingType": "MCP_API.Controllers.HackathonController",
+    "Method": "Chatbot",
+    "RelativePath": "api/Hackathon/Chatbot",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "input",
+        "Type": "MCP_API.Models.DTO.CAinputDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MCP_API.Controllers.HackathonController",
     "Method": "createHackathon",
     "RelativePath": "api/Hackathon/createHackathon",
     "HttpMethod": "POST",

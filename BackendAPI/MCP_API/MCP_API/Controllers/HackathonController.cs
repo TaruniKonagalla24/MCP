@@ -37,6 +37,17 @@ namespace MCP_API.Controllers
             return Ok(output);
 
         }
+        [HttpPost("Chatbot")]
+        public async Task<IActionResult> Chatbot(CAinputDTO input)
+        {
+            var output = await hackathonMaster.chatbot(input);
+            if (output == null)
+            {
+                return NotFound();
+            }
+            return Ok(output);
+
+        }
         [HttpPost("submitHackathon")]
         public async Task<IActionResult> submitHackathon(SubmitHackathon input)
         {
