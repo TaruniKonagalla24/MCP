@@ -49,8 +49,8 @@ function App() {
             <div className="main-content">
               <Routes>
                 <Route path="/admin-dashboard" element={<AdminDashboard setIsLoggedIn={setIsLoggedIn} setUserRole={setUserRole} />} />
-                <Route path="/admin/users-progress" element={<AdminUsers />} />
-                <Route path="/admin/manage-hackathons" element={<AdminHackathons />} />
+                <Route path="/admin/users-progress" element={<AdminUsers setIsLoggedIn={setIsLoggedIn} setUserRole={setUserRole}/>} />
+                <Route path="/admin/manage-hackathons" element={<AdminHackathons setIsLoggedIn={setIsLoggedIn} setUserRole={setUserRole} />} />
                 <Route path="/admin/reports-analytics" element={<AdminReports />} />
                 <Route path="/admin/AdminCreateHackathon" element={<AdminCreateHackathon />} />
                 <Route path="*" element={<Navigate to="/admin-dashboard" />} />

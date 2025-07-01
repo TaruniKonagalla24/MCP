@@ -7,16 +7,15 @@
  .main-content {
   margin-left: 250px; /* match sidebar width */
   width: calc(100% - 250px); /* fill remaining space */
-  padding: 30px;
+  padding: 0;
   background-color: #f8fafc;
   min-height: 100vh;
   box-sizing: border-box;
+  overflow-y: auto;
+  height: 0;
 }
 
- .App {
-display: flex;
-height: 100vh;
- }
+ 
  body,html, #root {
   margin: 0;
   padding: 0;

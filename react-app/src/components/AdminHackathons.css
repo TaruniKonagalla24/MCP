@@ -1,124 +1,206 @@
+/* ========== Layout ========== */
+
 .admin-hackathons-wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; /* vertically center */
   min-height: 100vh;
-  padding-left: 50px;
+  padding: 40px 20px;
   background-color: #ffffff;
+  box-sizing: border-box;
 }
-
+ 
 .admin-hackathons-container {
-  width: 100%;
-  max-width: 900px;
+  width: 80%;
+  max-width: 1000px;
   background-color: #fff;
-  padding: 40px 50px;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+  padding: 40px;
+  border-radius: 12px;
   text-align: center;
+  box-sizing: border-box;
 }
-
+ 
 .admin-hackathons-container h2 {
   font-size: 32px;
   font-weight: 600;
   margin-bottom: 30px;
   color: #333;
 }
-
+ 
+/* ========== Filters ========== */
 .filter-controls {
   margin-bottom: 20px;
+  /* margin-left: 400px;
+  margin-right:400px; */
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 15px;
 }
-
+ 
 .filter-controls label {
   font-weight: 600;
   color: #555;
 }
-
+ 
 .status-filter {
-  padding: 8px 15px;
-  border-radius: 6px;
-  border: 1px solid #ddd;
-  background-color: #f8f8f8;
-  font-size: 14px;
+  width:150px;
+  max-width: 300px;
 }
-
+ 
+/* ========== Bulk Actions ========== */
+.bulk-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+ 
+/* ========== Table ========== */
 .hackathons-table {
-  width: 100%;
+  width: 90%;
   border-collapse: collapse;
   margin-top: 20px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
   overflow: hidden;
+  margin-left: 80px;
 }
-
+ 
 .hackathons-table th,
 .hackathons-table td {
   padding: 16px 20px;
   border-bottom: 1px solid #ddd;
   text-align: center;
 }
-
+ 
 .hackathons-table th {
   background-color: #007bff;
-  color: white;
+  color: #ffffff;
   font-weight: 600;
 }
-
+ 
 .hackathons-table tr:nth-child(even) {
   background-color: #f8f8f8;
 }
-
+ 
 .hackathons-table tr:hover {
   background-color: #f1f1f1;
 }
-
+ 
+/* ========== Actions ========== */
 .actions-cell {
   display: flex;
   gap: 10px;
   justify-content: center;
+  flex-wrap: wrap; /* allow stacking on smaller widths */
 }
-
-.report-btn {
-  background-color: #28a745;
-  color: white;
+ 
+.report-btn,
+.delete-btn {
   padding: 8px 15px;
   border-radius: 6px;
   border: none;
   font-weight: 600;
   cursor: pointer;
+  white-space: nowrap;
   transition: background-color 0.3s ease;
 }
-
+ 
+.report-btn {
+  background-color: #28a745;
+  color: white;
+}
+ 
 .report-btn:hover {
   background-color: #218838;
 }
-
+ 
 .report-btn:disabled {
   background-color: #cccccc;
   cursor: not-allowed;
 }
-
+ 
 .delete-btn {
   background-color: #dc3545;
   color: white;
-  padding: 8px 15px;
-  border-radius: 6px;
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
-
+ 
 .delete-btn:hover {
   background-color: #b52a36;
 }
-
+ 
+/* ========== Empty State ========== */
 .no-results {
   padding: 20px;
   text-align: center;
   color: #666;
   font-style: italic;
+}
+ 
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .admin-hackathons-wrapper {
+    padding-left: 0;
+    padding-top: 20px;
+  }
+ 
+  .admin-hackathons-container {
+    padding: 20px;
+  }
+ 
+  .filter-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+ 
+  .status-filter {
+    width: 100%;
+    max-width: 300px;
+  }
+ 
+  .actions-cell {
+    flex-direction: column;
+  }
+ 
+  .report-btn,
+  .delete-btn {
+    width: 100%;
+  }
+ 
+  /* Optional: Hide less important columns */
+  .hackathons-table th:nth-child(1),
+  .hackathons-table td:nth-child(1),
+  .hackathons-table th:nth-child(3),
+  .hackathons-table td:nth-child(3) {
+    display: none;
+  }
+  .generate-all-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+ 
+.generate-all-btn:hover {
+  background-color: #0056b3;
+}
+ 
+.generate-all-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+}
+.hackathon-dashboard-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-left: 400px;
+
 }
