@@ -136,7 +136,7 @@ const HackathonPage = () => {
     fontSize: '24px'
   }}>
           <FaTrophy style={{ marginRight: '10px', color: '#F6AD55' }} />
-          Hackathon Challenges
+          Challenges
         </h2>
 
         <div style={{
