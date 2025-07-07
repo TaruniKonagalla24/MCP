@@ -238,8 +238,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-19T15:12:25.208Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -252,8 +251,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-25T16:32:25.048Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -266,8 +264,7 @@
               "ViewState": "AgIAADoAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-22T11:45:17.083Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -280,8 +277,7 @@
               "ViewState": "AgIAAN4AAAAAAAAAAAAEwOgAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-22T10:40:32.486Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -294,12 +290,7 @@
               "ViewState": "AgIAAEwAAAAAAAAAAAAuwE0AAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-19T15:57:59.343Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -311,8 +302,7 @@
               "RelativeToolTip": "MCP_API\\Models\\DTO\\EvaluationDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-29T10:39:26.26Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-29T10:39:26.26Z"
             },
             {
               "$type": "Document",
@@ -324,8 +314,7 @@
               "RelativeToolTip": "MCP_API\\AiConfig\\EvaluationService.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAmwC0AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-29T10:54:07.954Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-29T10:54:07.954Z"
             },
             {
               "$type": "Document",
@@ -337,8 +326,7 @@
               "RelativeToolTip": "MCP_API\\Repository\\IHackathonMaster.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAuwA0AAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T14:15:20.187Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-21T14:15:20.187Z"
             },
             {
               "$type": "Document",
@@ -350,8 +338,7 @@
               "RelativeToolTip": "MCP_API\\AiConfig\\AddHackathonService.cs",
               "ViewState": "AgIAACsAAAAAAAAAAAAswCMAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T15:19:22.964Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-26T15:19:22.964Z"
             },
             {
               "$type": "Document",
@@ -363,8 +350,7 @@
               "RelativeToolTip": "MCP_API\\Models\\DTO\\EvaluationresultDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-29T10:48:05.857Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-29T10:48:05.857Z"
             },
             {
               "$type": "Document",
@@ -400,8 +386,7 @@
               "RelativeToolTip": "MCP_API\\SQL\\StudentRepository.cs",
               "ViewState": "AgIAAHIAAAAAAAAAAAAiwJgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T15:46:57.561Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-19T15:46:57.561Z"
             },
             {
               "$type": "Document",
@@ -437,8 +422,7 @@
               "RelativeToolTip": "MCP_API\\SQL\\TeamSqlImp.cs",
               "ViewState": "AgIAADQAAAAAAAAAAAAqwD8AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T11:14:47.988Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-22T11:14:47.988Z"
             },
             {
               "$type": "Document",
@@ -450,8 +434,7 @@
               "RelativeToolTip": "MCP_API\\AiConfig\\ReportService.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAMwBgAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-29T17:09:26.363Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-29T17:09:26.363Z"
             },
             {
               "$type": "Document",
@@ -487,8 +470,7 @@
               "RelativeToolTip": "MCP_API\\Models\\DTO\\HackathonReportDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T04:03:42.522Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-27T04:03:42.522Z"
             },
             {
               "$type": "Document",
@@ -513,8 +495,7 @@
               "RelativeToolTip": "MCP_API\\Models\\DTO\\ProgrssDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T17:48:28.237Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-26T17:48:28.237Z"
             },
             {
               "$type": "Document",
@@ -538,8 +519,7 @@
               "RelativeToolTip": "MCP_API\\Models\\DTO\\NewHackathon.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T17:04:32.828Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-26T17:04:32.828Z"
             },
             {
               "$type": "Document",
@@ -587,8 +567,7 @@
               "RelativeToolTip": "..\\..\\..\\Users\\karth\\AppData\\Local\\SourceServer\\3bc179835f91172dbd9fa47efac2a535cffd8479d1c889086ca138b593f8d53d\\BackendAPI\\MCP_API\\MCP_API\\SQL\\StudentRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEwAAAAiAAAAAQAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T16:40:12.009Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-24T16:40:12.009Z"
             },
             {
               "$type": "Document",
@@ -600,8 +579,7 @@
               "RelativeToolTip": "MCP_API\\Models\\DTO\\GetHackathons.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T10:37:50.103Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-22T10:37:50.103Z"
             },
             {
               "$type": "Document",
@@ -613,8 +591,7 @@
               "RelativeToolTip": "MCP_API\\Models\\DTO\\CreateTeam.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T11:12:13.899Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-22T11:12:13.899Z"
             },
             {
               "$type": "Document",
@@ -650,8 +627,7 @@
               "RelativeToolTip": "MCP_API\\Models\\DTO\\UpdateProfileDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T15:56:10.384Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-22T15:56:10.384Z"
             },
             {
               "$type": "Document",
@@ -675,8 +651,7 @@
               "RelativeToolTip": "MCP_API\\Models\\DTO\\ChallengeDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T16:31:13.29Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-24T16:31:13.29Z"
             },
             {
               "$type": "Document",
@@ -700,8 +675,7 @@
               "RelativeToolTip": "MCP_API\\Models\\Tables\\HackathonDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T15:12:56.257Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-19T15:12:56.257Z"
             },
             {
               "$type": "Document",
@@ -713,8 +687,7 @@
               "RelativeToolTip": "MCP_API\\Models\\Tables\\UserDTO.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAiwBkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T15:11:25.784Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-19T15:11:25.784Z"
             },
             {
               "$type": "Document",
@@ -726,8 +699,7 @@
               "RelativeToolTip": "MCP_API\\Models\\DTO\\AddHackathonmaster.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T14:21:20.28Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-21T14:21:20.28Z"
             },
             {
               "$type": "Document",
@@ -739,8 +711,7 @@
               "RelativeToolTip": "MCP_API\\Models\\DTO\\LoginDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T15:49:14.286Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-19T15:49:14.286Z"
             },
             {
               "$type": "Document",
@@ -752,8 +723,7 @@
               "RelativeToolTip": "MCP_API\\Models\\DTO\\HackathonStatus.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T13:38:32.532Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-22T13:38:32.532Z"
             },
             {
               "$type": "Document",
@@ -765,8 +735,7 @@
               "RelativeToolTip": "MCP_API\\Models\\DTO\\JoinTeam.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T12:05:37.201Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-22T12:05:37.201Z"
             },
             {
               "$type": "Document",
@@ -778,8 +747,7 @@
               "RelativeToolTip": "MCP_API\\Models\\Tables\\SummaryDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T08:39:15.168Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-22T08:39:15.168Z"
             },
             {
               "$type": "Document",
@@ -803,8 +771,7 @@
               "RelativeToolTip": "MCP_API\\Models\\DTO\\MyTeams.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T11:06:30.344Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-22T11:06:30.344Z"
             },
             {
               "$type": "Document",
@@ -816,8 +783,7 @@
               "RelativeToolTip": "MCP_API\\Models\\Tables\\Teams.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T08:46:57.928Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-22T08:46:57.928Z"
             },
             {
               "$type": "Document",
@@ -829,8 +795,7 @@
               "RelativeToolTip": "MCP_API\\Models\\Tables\\TeamMaster.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T08:45:36.339Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-22T08:45:36.339Z"
             },
             {
               "$type": "Document",
@@ -854,8 +819,7 @@
               "RelativeToolTip": "MCP_API\\Models\\DTO\\OverallLeaderboardDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T09:25:16.688Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-22T09:25:16.688Z"
             },
             {
               "$type": "Document",
@@ -879,8 +843,7 @@
               "RelativeToolTip": "MCP_API\\Migrations\\20250621144403_null changes.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T14:44:04.135Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-21T14:44:04.135Z"
             },
             {
               "$type": "Document",
@@ -892,8 +855,7 @@
               "RelativeToolTip": "MCP_API\\Models\\DTO\\RegisterDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T09:50:47.731Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-20T09:50:47.731Z"
             },
             {
               "$type": "Document",
@@ -905,8 +867,7 @@
               "RelativeToolTip": "MCP_API\\Migrations\\20250620110240_test.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T11:02:40.3Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-20T11:02:40.3Z"
             },
             {
               "$type": "Document",
@@ -929,6 +890,10 @@
               "RelativeToolTip": "..\\..\\..\\Projects\\MCP\\MCP\\BackendAPI\\MCP_API\\MCP_API\\Migrations\\20250619151724_initial.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-19T15:17:24.48Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }
